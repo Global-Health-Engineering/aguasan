@@ -12,8 +12,8 @@ Proposals are due to roger.schmid@skat.ch by **30 June 2026**.
 .
 ├── proposal/        The proposal itself and the official call
 ├── concept-note/    Standalone 1-page concept note (topic-only, no template)
-├── sources/         Source recordings and their transcripts
 ├── references/      Curated reference material (web sources + index)
+├── sources/         Source recordings and transcripts (local only, not tracked)
 ├── aguasan.Rproj    RStudio project file
 └── README.md
 ```
@@ -26,17 +26,19 @@ Proposals are due to roger.schmid@skat.ch by **30 June 2026**.
 
 ### `concept-note/`
 
-- `concept-note.qmd` - a self-contained one-pager describing the topic, independent of the AGUASAN proposal template. Synthesised from the source recordings.
-
-### `sources/`
-
-- `recording-24.m4a`, `recording-25.m4a` - voice recordings capturing the proposer's thinking.
-- `recording-24.md`, `recording-25.md` - transcripts of those recordings (whisper.cpp, medium.en model; lightly reformatted into paragraphs, wording preserved).
+- `concept-note.qmd` - a self-contained one-pager describing the topic, independent of the AGUASAN proposal template. Synthesised from the source recordings and the reference material.
 
 ### `references/`
 
 - `references.md` - the index of all reference material.
-- One file per web source, each recording the source URL and the date captured (openwashdata vision and mission, data catalogue, the two academy cohorts, and the Data Science for openwashdata course).
+- One file per source, each recording the source URL and the date captured: openwashdata vision and mission, the data catalogue, the two academy cohorts, the Data Science for openwashdata course, and the ETH ORD Program projects that the work builds on.
+
+### `sources/` (local only, not tracked)
+
+- `recording-24.m4a`, `recording-25.m4a` - voice recordings capturing the proposer's thinking.
+- `recording-24.md`, `recording-25.md` - transcripts of those recordings (whisper.cpp, medium.en model; lightly reformatted into paragraphs, wording preserved).
+
+This folder is excluded from git (see `.gitignore`) because the recordings contain candid internal notes. It stays on the proposer's machine and is not part of the published repository.
 
 ## Rendering the documents
 
@@ -49,4 +51,4 @@ Render artifacts (`.html`, `*_files/`, `.quarto/`) are not tracked; see `.gitign
 
 ## How these materials were produced
 
-The transcripts were generated from the recordings, the concept note and proposal draft were written from those transcripts, and the references folder was compiled from the web sources listed in `references/references.md`. The recordings in `sources/` are the original input; everything else is derived from them.
+The transcripts were generated from the recordings, the concept note and proposal draft were written from those transcripts and the reference material, and the references folder was compiled from the sources listed in `references/references.md`. The recordings in `sources/` are the original input; everything else is derived from them. Because the recordings hold candid internal notes, `sources/` is kept local and out of the published repository.

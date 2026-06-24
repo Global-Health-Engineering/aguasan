@@ -26,6 +26,8 @@ This concept note proposes a five-day, hands-on workshop that treats these three
 
 The workshop is embedded in the mission of [openwashdata](https://openwashdata.org/pages/gallery/vmost/): to empower WASH professionals to engage with the tools and workflows for open data and code, working towards an active global community that applies FAIR principles (findable, accessible, interoperable, reusable) to data across the sector. The community already maintains a catalogue of [51 documented, reusable datasets](https://openwashdata.org/pages/gallery/data/), each with its own website and rich documentation.
 
+This is not a proposal from a standing start. Between 2023 and 2026, the Global Health Engineering group at ETH Zurich ran five related projects funded by the Open Research Data (ORD) Program of the ETH Board, together worth roughly CHF 500,000, building the community, the publishing workflow, the academy, and the tools described below. That work received the National Prize for Open Research Data 2024 from the Swiss Academies of Arts and Sciences. The ORD funding window closes in 2026; an AGUASAN workshop in 2027 is the natural bridge to carry the effort forward and turn a time-limited research-data programme into ongoing sector practice.
+
 ## What makes it different: a working retreat, not a lecture series
 
 This is not a conference of slide presentations. It is a working retreat where every participant ships something real.
@@ -45,6 +47,15 @@ The week establishes a small set of foundations that let people work confidently
 
 A shared cloud environment (for example Posit Cloud) can give everyone a safe, identical starting point, lowering the barrier for participants who do not yet code.
 
+## Quantitative and qualitative data both belong here
+
+Open data is too often framed as a problem only for people with spreadsheets and survey rounds. The work behind this proposal spans both ends:
+
+- **Quantitative and monitoring data.** Through the openjmp and washcollab projects, the team has worked directly with the authoritative global indicators, opening WHO/UNICEF Joint Monitoring Programme data and building tools that draw on the World Bank, UN-Water GLAAS, and OECD, in partnership with the WASHWeb community.
+- **Qualitative research data.** Through the FAIRqual project, the team has tackled the harder case: how interviews, workshops, and other qualitative materials, which often resist anonymisation, can be shared following FAIR principles while protecting research subjects.
+
+That second strand matters because it lets the workshop welcome qualitative researchers, who frequently assume that "open data" does not apply to their work. It does, and this workshop can show them how.
+
 ## Why now
 
 AI has already changed how everyone works. The question is shifting from "can a machine write this?" to "is our data ready for it?" If agents can already draft papers from a dataset, the real work is making WASH data AI-ready: openly licensed, well documented, and reproducible. This workshop turns that shift into a set of habits and a body of published data, rather than leaving it to chance.
@@ -58,15 +69,16 @@ AI has already changed how everyone works. The question is shifting from "can a 
 
 ## Evidence of demand
 
-The [Data Science for openwashdata](https://ds4owd-002.github.io/website/) course has run twice. The [first iteration](https://openwashdata.org/pages/academy/graduates-2024/) drew more than 200 registrations and produced 22 capstone data projects; the [second](https://openwashdata.org/pages/academy/graduates-2026/) drew more than 150 registrations and graduated 48 participants, each publishing a dataset of their choice. The appetite for practical, open, reproducible data skills in the WASH sector is already demonstrated.
+The [Data Science for openwashdata](https://ds4owd-002.github.io/website/) course has run twice. The [first iteration](https://openwashdata.org/pages/academy/graduates-2024/) drew more than 200 registrations and produced 22 capstone data projects; the [second](https://openwashdata.org/pages/academy/graduates-2026/) drew more than 150 registrations and graduated 48 participants, each publishing a dataset of their choice. Alongside the course, the data-stewardship work embedded funded stewards inside partner organisations in Malawi and South Africa, showing that the demand reaches from individual learners to institutions. The appetite for practical, open, reproducible data skills in the WASH sector is already demonstrated.
 
 ## Where it leads
 
 The workshop is a gateway, not an endpoint:
 
 - **A third iteration of the openwashdata academy**, a free, online, ten-week course open to learners of all levels, to bring participants and their colleagues properly into the R and reproducible-data world.
+- **A data-stewardship pathway.** The existing 12-module data stewardship programme and the embedded-steward model give institutions a way to keep going after the week ends, not just individuals.
 - **Data papers, not just datasets.** A possible special issue in a sector journal (for example focused on WASH data papers) would give published data a real, citable home rather than relying on the openwashdata organisation alone.
-- **AI-ready data infrastructure.** A more formal home for the sector's open data, building a bridge from "we publish on GitHub today" to a durable, AI-ready foundation.
+- **AI-ready data infrastructure.** A more formal home for the sector's open data, building a bridge from "we publish on GitHub today" to a durable, AI-ready foundation, continuing the ETH ORD effort beyond its funding window.
 
 ## In one sentence
 

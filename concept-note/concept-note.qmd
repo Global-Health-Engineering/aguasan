@@ -33,7 +33,7 @@ This is not a proposal from a standing start. Between 2023 and 2026, the Global 
 This is not a conference of slide presentations. It is a working retreat where every participant ships something real.
 
 - **A precondition to attend.** Everyone accepted brings a dataset to publish. Data can be pre-screened in the submission form, and participants prepare their GitHub accounts before arrival. Engagement starts at least four weeks ahead.
-- **Hands-on from day one.** Minimal talk-input at the start. Workshop units run early in the week (for example Monday, Wednesday, Friday) with individual work and short presentation inputs in between (Tuesday, Thursday).
+- **Hands-on from day one.** Minimal talk-input at the start. Taught workshop units run on Monday, Tuesday, and Friday, with individual work and short participant presentations in between (Tuesday and Thursday).
 - **A concrete target.** By the end of the week, 30 to 50 data packages exist in at least draft form, with documentation, ready to be unified and shared through a common GitHub infrastructure.
 
 ## The foundational skills
@@ -53,14 +53,9 @@ The entry barrier to these foundations, Git and GitHub in particular, has droppe
 - Quarto for collaborative scientific writing: <https://quarto-rdmss-26.github.io/website/>
 - AI agents for scientists: <https://github.com/agentsforsci>
 
-## Quantitative and qualitative data both belong here
+## Qualitative data belongs here too
 
-Open data is too often framed as a problem only for people with spreadsheets and survey rounds. The work behind this proposal spans both ends:
-
-- **Quantitative and monitoring data.** Through the openjmp and washcollab projects, the team has worked directly with the authoritative global indicators, opening WHO/UNICEF Joint Monitoring Programme data and building tools that draw on the UN-Water GLAAS, in partnership with the WASHWeb community.
-- **Qualitative research data.** Through the FAIRqual project, the team has tackled the harder case: how interviews, workshops, and other qualitative materials, which often resist anonymisation, can be shared following FAIR principles while protecting research subjects.
-
-That second strand matters because it lets the workshop welcome qualitative researchers, who frequently assume that "open data" does not apply to their work. It does, and this workshop can show them how.
+Open data is too often framed as a problem only for people with spreadsheets and survey rounds. Through the FAIRqual project, the team has worked on the harder case: how interviews, workshops, and other qualitative materials, which often resist anonymisation, can be shared following FAIR principles while protecting research subjects. That experience lets the workshop welcome qualitative researchers, who frequently assume that "open data" does not apply to their work. It does, and this workshop can show them how.
 
 ## Why now
 
@@ -91,11 +86,9 @@ The workshop is a gateway, not an endpoint:
 
 ## Objectives
 
-1. Fulfil the [openwashdata vision and mission](https://openwashdata.org/about).
-2. Lay the foundation for collaborative work on GitHub across the WASH sector.
-3. Publish data following the openwashdata data publication workflow.
-4. Make data "FAIR for AI" (building on emerging concepts such as FAIR2 and FAIR-R).
-5. Get people AI-ready for agentic AI tools, and able to use them safely.
+1. **Equip WASH practitioners to collaborate on GitHub** - the shared foundation of Git, GitHub, and Quarto for working openly and reproducibly, and the precondition for safe AI use.
+2. **Publish participants' own data openly** - everyone leaves having published a documented dataset following the openwashdata workflow, adding to the sector's body of FAIR, reusable data.
+3. **Get people ready to use AI tools safely** - hands-on with agentic coding plus data-security literacy, so that both participants and their data are AI-ready.
 
 ## In one sentence
 

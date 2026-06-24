@@ -18,6 +18,13 @@ Curated reference material for the AGUASAN Workshop 2027 topic proposal on data,
 - Four sit in the openwashdata / WASH data family; **fairqual** focuses on data in qualitative research (its own org: https://github.com/fairqual), demonstrating experience that would help the workshop welcome qualitative researchers too.
 - AGUASAN can provide the bridge to continue these efforts beyond the ORD funding window.
 
+## Workshop materials (open educational resources)
+
+- [Open educational workshop materials](workshop-materials.md) - existing teaching material the live sessions could reuse.
+- Git for Scientists - https://gitforsci-cis.github.io/website/
+- Quarto for collaborative scientific writing - https://quarto-rdmss-26.github.io/website/
+- AI agents for scientists - https://github.com/agentsforsci (website forthcoming)
+
 ## Source recordings
 
 - [recording-24.md](../sources/recording-24.md) - Lars thoughts on the workshop design, AI foundational skills, pre-workshop data submission, week structure, and follow-up paths.

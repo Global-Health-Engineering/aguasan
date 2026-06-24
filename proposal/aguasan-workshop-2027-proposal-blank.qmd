@@ -1,7 +1,7 @@
 ---
 title: "AGUASAN Workshop 2027 - Topic Proposal"
 subtitle: "Call for Topic Proposals - AGUASAN Community of Practice and SDC's Water Network RésEAU"
-author: "[Your name]"
+author: "Elizabeth Tilley, Lars Schöbitz - Global Health Engineering, ETH Zurich"
 date: today
 format:
   html:
@@ -70,25 +70,25 @@ Guidance is shown in *italics*; replace the bracketed placeholders with your tex
 ## 1. Proposer and organisation
 
 | Field | Your entry |
-|----|----|
-| **Name \*** | *[...]* |
-| **Organisation \*** | *[...]* |
-| **Position / role** | *[...]* |
-| **E-mail \*** | *[...]* |
-| **Responding as \*** | ☐ AGUASAN CoP member ☐ SDC RésEAU member ☐ Partner institution of SDC/SHA/SECO |
-| **Linked Swiss-based organisation or project \*** | *\[...\] If you are not a Swiss-based organisation, indicate which Swiss-based organisation you partner with.* |
+|------------------------------------|------------------------------------|
+| **Name \*** | Prof. Dr. Elizabeth Tilley & Lars Schöbitz |
+| **Organisation \*** | Global Health Engineering, ETH Zurich |
+| **Position / role** | Associate Professor & Data Steward |
+| **E-mail \*** | tilleye\@ethz.ch & lschoebitz\@ethz.ch |
+| **Responding as \*** | ☒ AGUASAN CoP member ☐ SDC RésEAU member ☐ Partner institution of SDC/SHA/SECO |
+| **Linked Swiss-based organisation or project \*** | Global Health Engineering, ETH Zurich, host of the openwashdata community and the Open Research Data projects funded by the ETH Board (2023-2026). |
 
 ## 2. The proposed topic
 
 ### 2.1 Working title \*
 
-> *[...]*
+> Ship Your Data: A Hands-On Retreat for Open, AI-Ready WASH Data.
 
 ### 2.2 Relevance and timeliness \*
 
 *Describe the topic and why it is timely and relevant for the sector. Why does it matter now?*
 
-> *[...]*
+> The WASH sector is flush with data, from household surveys to theses to published manuscripts, yet it is rarely shared. The result is duplication, fatigue, and waste, with much of what exists locked in reports and PDFs that are quickly lost. Meanwhile AI has moved in a few years from a better search engine to a tool that can analyse data, build apps, and surface research gaps. The question is shifting from "can a machine write this?" to "is our data ready for it?" The real work now is publishing WASH data following FAIR principles and making it AI-ready: openly licensed, well documented, and reproducible. This workshop is a working retreat where every participant arrives with a dataset and leaves having published it, building the skills and mindset to keep their data open, reusable, and AI-ready for the rest of their careers.
 
 ## 3. Context and added value
 
@@ -98,19 +98,19 @@ Guidance is shown in *italics*; replace the bracketed placeholders with your tex
 
 *Is the topic best addressed in Switzerland, in a specific country or region, or is it topic-led with no strong preference? If a specific country or region, please specify and explain.*
 
-> *[...]*
+> Topic-led, with a preference for Switzerland. The hands-on format benefits from a shared cloud environment and stable connectivity, and the topic is global rather than tied to one country. The work already reaches institutions abroad: funded data stewards have been embedded in partner organisations in Malawi and South Africa.
 
 ### 3.2 Added value of an AGUASAN workshop in this context \*
 
 *What would be the added value of addressing this topic through an AGUASAN workshop, in the proposed context?*
 
-> *\[...\]*
+> The workshop turns a time-limited research-data programme into ongoing sector practice. Between 2023 and 2026, Global Health Engineering at ETH Zurich ran five projects funded by the Open Research Data Program of the ETH Board (roughly CHF 500,000), building the openwashdata community, publishing workflow, academy, and tools, work that received the National Prize for Open Research Data 2024. The ORD funding window closes in 2026; an AGUASAN workshop in 2027 is the natural bridge to carry the effort forward across the sector rather than leaving it to chance.
 
 ### 3.3 Who would benefit from the workshop results
 
 *Which national, regional, or international entities would benefit from the workshop's discussions and results, and what link already exists with them?*
 
-> *[...]*
+> Utilities learn from one another and gain arguments for institutional change at home; NGOs and practitioners make their in-house data visible and reusable; early-career professionals build good data habits; senior practitioners adapt to fast-changing tools with less stress. The openwashdata community already links to more than 200 academy registrants, partner organisations in Malawi and South Africa, and a catalogue of 51 documented, reusable datasets.
 
 ## 4. Demand, ownership and custodianship
 
@@ -118,13 +118,13 @@ Guidance is shown in *italics*; replace the bracketed placeholders with your tex
 
 *What indicates there is interest in this topic, and among which actors?*
 
-> *[...]*
+> The Data Science for openwashdata course has run twice. The first iteration drew more than 200 registrations and produced 22 capstone data projects; the second drew more than 150 registrations and graduated 48 participants, each publishing a capstone project with a dataset of their choice. Alongside the course, funded data stewards were embedded inside partner organisations in Malawi and South Africa. The appetite for practical, open, reproducible data skills, from individual learners to institutions, is already demonstrated.
 
 ### 4.2 Envisaged follow-up \*
 
 *How would the workshop's outcomes be taken forward, and by whom?*
 
-> *[...]*
+> A third iteration of the openwashdata academy, a free ten-week online course, would bring Aguasan workshop participants and their colleagues properly into reproducible-data work by fully equipping participants with foundational skills in the R programming language for data analysis. A special issue in a sector journal focused on WASH data papers would give published data a citable home. A more formal home for the sector's open data would build a bridge from "we publish on GitHub today" to a durable, AI-ready foundation. The team overseeing the openwashdata community at ETH Zurich would carry these forward.
 
 ## 5. Expected outcomes
 
@@ -132,17 +132,23 @@ Guidance is shown in *italics*; replace the bracketed placeholders with your tex
 
 *What concrete outputs could the workshop deliver (e.g. partnerships, a tool, guidance, a roadmap), who would benefit, and how?*
 
-> *\[...\]*
+> This is a working retreat where every participant ships something real. A precondition to attend is bringing a dataset to publish. By the end of the week, 30 to 50 documented data packages exist in at least draft form, ready to be unified and shared through a common GitHub infrastructure. Participants also leave with a small set of durable skills, Git and GitHub, Quarto, and safe use of AI agents, plus a concrete plan for integrating these tools into their own organisation.
 
 ## 6. Substance the workshop could draw on
 
 ### 6.1 Possible case studies
 
-> *[...]*
+> The 22 capstone projects from the first academy iteration and the 48 capstone projects from the second, each built on a dataset the participant chose and is in the process of publishing, offer ready case studies of practitioners publishing their own data. The data-stewardship work in Malawi and South Africa shows the institutional case. The FAIRqual project provides a harder case: how qualitative materials such as interviews and workshops, which often resist anonymisation, can be shared following FAIR principles while protecting research subjects.
+>
+> Possible speakers include alumni of the Data Science for openwashdata course whose participation led to published, reusable data. One example: Kelsey Shaw began working with her PhD data during the first cohort and, with openwashdata support, published it openly and co-authored a paper in *Environmental Science & Technology*. We would also invite a speaker from PLOS (Public Library of Science), with whom we co-hosted a webinar on FAIR data sharing in January 2023 (Lauren Cadwallader, Open Research Manager), to speak to the publishing and data-paper pathway.
 
 ### 6.2 Knowledge resources, data, tools, or existing initiatives
 
-- *[...]*
+- openwashdata community and its catalogue of 51 documented, reusable datasets: <https://openwashdata.org/pages/gallery/data/>
+- Git for scientists: <https://gitforsci-cis.github.io/website/>
+- Quarto for collaborative scientific writing: <https://quarto-rdmss-26.github.io/website/>
+- AI agents for scientists: <https://github.com/agentsforsci>
+- Data Science for openwashdata course: <https://ds4owd-002.github.io/website/>
 
 ## 7. Engagement and contribution
 
@@ -150,15 +156,15 @@ Guidance is shown in *italics*; replace the bracketed placeholders with your tex
 
 *Tick all that apply (replace ☐ with ☒).*
 
-- [ ] Be the custodian
-- [ ] The preparatory event (October 2026)
-- [ ] The Steering Committee
-- [ ] Bringing / facilitating case studies
-- [ ] Presenting at the workshop
+- [x] Be the custodian
+- [x] The preparatory event (October 2026)
+- [x] The Steering Committee
+- [x] Bringing / facilitating case studies
+- [x] Presenting at the workshop
 
 ### 7.2 Any other comments
 
-> *[...]*
+> The workshop material is not built from scratch; it already exists as open educational resources and would be used directly in the live sessions. A shared cloud environment (for example Posit Cloud) can give everyone a safe, identical starting point, lowering the barrier for participants who do not yet code.
 
 ------------------------------------------------------------------------
 

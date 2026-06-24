@@ -4,6 +4,9 @@ subtitle: "A concept note for a hands-on workshop on open, reproducible, AI-read
 author: "Lars Schöbitz, ETH Zurich"
 date: today
 format:
+  gfm:
+    toc: true
+    toc-depth: 2
   html:
     toc: true
     toc-depth: 2

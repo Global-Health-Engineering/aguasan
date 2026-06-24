@@ -1,0 +1,198 @@
+# Data, Digitization, and AI in WASH
+Lars Schöbitz, ETH Zurich
+2026-06-24
+
+- [The problem](#the-problem)
+- [The vision it builds on](#the-vision-it-builds-on)
+- [What makes it different: a working retreat, not a lecture
+  series](#what-makes-it-different-a-working-retreat-not-a-lecture-series)
+- [The foundational skills](#the-foundational-skills)
+- [Qualitative data belongs here
+  too](#qualitative-data-belongs-here-too)
+- [Why now](#why-now)
+- [Using AI safely](#using-ai-safely)
+- [Who benefits](#who-benefits)
+- [Evidence of demand](#evidence-of-demand)
+- [Where it leads](#where-it-leads)
+- [Objectives](#objectives)
+- [In one sentence](#in-one-sentence)
+
+## The problem
+
+The WASH sector is flush with data, from household surveys to Bachelor
+theses to published manuscripts, yet it is rarely made available to
+others. The result is duplication, fatigue, and waste. Much of what does
+exist sits in reports, PDFs, and hard copies that are quickly lost,
+forgotten, and never reused. Meanwhile AI has moved in a few years from
+a slightly better search engine to a tool that can analyse data, build
+apps and websites, and surface research gaps, and the sector has been
+slow to embrace it safely.
+
+This concept note proposes a five-day, hands-on workshop that treats
+these three threads, data, digitization, and AI, as one problem: getting
+WASH data into an open, reproducible, and AI-ready form, and equipping
+practitioners with the skills and mindset to keep it that way.
+
+## The vision it builds on
+
+The workshop is embedded in the mission of
+[openwashdata](https://openwashdata.org/pages/gallery/vmost/): to
+empower WASH professionals to engage with the tools and workflows for
+open data and code, working towards an active global community that
+applies FAIR principles (findable, accessible, interoperable, reusable)
+to data across the sector. The community already maintains a catalogue
+of [51 documented, reusable
+datasets](https://openwashdata.org/pages/gallery/data/), each with its
+own website and rich documentation.
+
+This is not a proposal from a standing start. Between 2023 and 2026, the
+Global Health Engineering group at ETH Zurich ran five related projects
+funded by the Open Research Data (ORD) Program of the ETH Board,
+together worth roughly CHF 500,000, building the community, the
+publishing workflow, the academy, and the tools described below. That
+work received the National Prize for Open Research Data 2024 from the
+Swiss Academies of Arts and Sciences. The ORD funding window closes in
+2026; an AGUASAN workshop in 2027 is the natural bridge to carry the
+effort forward and turn a time-limited research-data programme into
+ongoing sector practice.
+
+## What makes it different: a working retreat, not a lecture series
+
+This is not a conference of slide presentations. It is a working retreat
+where every participant ships something real.
+
+- **A precondition to attend.** Everyone accepted brings a dataset to
+  publish. Data can be pre-screened in the submission form, and
+  participants prepare their GitHub accounts before arrival. Engagement
+  starts at least four weeks ahead.
+- **Hands-on from day one.** Minimal talk-input at the start. Taught
+  workshop units run on Monday, Tuesday, and Friday, with individual
+  work and short participant presentations in between (Tuesday and
+  Thursday).
+- **A concrete target.** By the end of the week, 30 to 50 data packages
+  exist in at least draft form, with documentation, ready to be unified
+  and shared through a common GitHub infrastructure.
+
+## The foundational skills
+
+The week establishes a small set of foundations that let people work
+confidently and safely with modern tools:
+
+- **Git and GitHub** as the central point for collaboration, where data,
+  conversations, and issues all live, and as the precondition for using
+  more advanced AI tooling safely.
+- **Quarto** as a document format, moving people away from static
+  documents such as Word towards reproducible outputs.
+- **Working with AI agents** (for example coding agents rather than chat
+  interfaces), paired with the data-protection and data-sensitivity
+  literacy needed to use them responsibly.
+- **A clean, repository-centred way of organising files**, so that both
+  people and agents can work on the content reliably.
+
+A shared cloud environment (for example Posit Cloud) can give everyone a
+safe, identical starting point, lowering the barrier for participants
+who do not yet code.
+
+The entry barrier to these foundations, Git and GitHub in particular,
+has dropped sharply since agentic AI tools arrived, which is exactly why
+the workshop can be ambitious about them. This material is not built
+from scratch: it already exists, published as open educational
+resources, and would be used directly in the live sessions:
+
+- Git for scientists: <https://gitforsci-cis.github.io/website/>
+- Quarto for collaborative scientific writing:
+  <https://quarto-rdmss-26.github.io/website/>
+- AI agents for scientists: <https://github.com/agentsforsci>
+
+## Qualitative data belongs here too
+
+Open data is too often framed as a problem only for people with
+spreadsheets and survey rounds. Through the FAIRqual project, the team
+has worked on the harder case: how interviews, workshops, and other
+qualitative materials, which often resist anonymisation, can be shared
+following FAIR principles while protecting research subjects. That
+experience lets the workshop welcome qualitative researchers, who
+frequently assume that “open data” does not apply to their work. It
+does, and this workshop can show them how.
+
+## Why now
+
+AI has already changed how everyone works. The question is shifting from
+“can a machine write this?” to “is our data ready for it?” If agents can
+already draft papers from a dataset, the real work is publishing WASH
+data following FAIR data sharing principles and making it AI-ready:
+openly licensed, well documented, and reproducible. This workshop turns
+that shift into a set of habits and a body of published data, rather
+than leaving it to chance.
+
+## Using AI safely
+
+Most people have so far met AI through chat windows, often in unsafe
+ways: pasting in files, folders, and data that should stay securely on a
+laptop rather than being shared. The workshop sets the awareness and the
+practical knowledge to use these tools safely, with dedicated sessions
+on data security and a first hands-on taste of agentic coding, the tool
+anyone serious about AI will eventually use. Participants leave ahead of
+the curve, with a concrete plan for integrating these tools safely into
+their own organisation.
+
+## Who benefits
+
+- **Utilities** learn from one another and gain arguments for
+  institutional change at home.
+- **NGOs and practitioners** gain the tools to make their valuable
+  in-house data visible and reusable.
+- **Early-career professionals** build good data habits and an ambitious
+  vision for how they will manage data for the rest of their careers.
+- **Senior practitioners** gain a way to adapt to fast-changing tools
+  with less stress.
+
+## Evidence of demand
+
+The [Data Science for
+openwashdata](https://ds4owd-002.github.io/website/) course has run
+twice. The [first
+iteration](https://openwashdata.org/pages/academy/graduates-2024/) drew
+more than 200 registrations and produced 22 capstone data projects; the
+[second](https://openwashdata.org/pages/academy/graduates-2026/) drew
+more than 150 registrations and graduated 48 participants, each
+publishing a dataset of their choice. Alongside the course, the
+data-stewardship work embedded funded stewards inside partner
+organisations in Malawi and South Africa, showing that the demand
+reaches from individual learners to institutions. The appetite for
+practical, open, reproducible data skills in the WASH sector is already
+demonstrated.
+
+## Where it leads
+
+The workshop is a gateway, not an endpoint:
+
+- **A third iteration of the openwashdata academy**, a free, online,
+  ten-week course open to learners of all levels, to bring participants
+  and their colleagues properly into the R and reproducible-data world.
+- **Data papers, not just datasets.** A possible special issue in a
+  sector journal (for example focused on WASH data papers) would give
+  published data a real, citable home rather than relying on the
+  openwashdata organisation alone.
+- **AI-ready data infrastructure.** A more formal home for the sector’s
+  open data, building a bridge from “we publish on GitHub today” to a
+  durable, AI-ready foundation.
+
+## Objectives
+
+1.  **Equip WASH practitioners to collaborate on GitHub** - the shared
+    foundation of Git, GitHub, and Quarto for working openly and
+    reproducibly, and the precondition for safe AI use.
+2.  **Publish participants’ own data openly** - everyone leaves having
+    published a documented dataset following the openwashdata workflow,
+    adding to the sector’s body of FAIR, reusable data.
+3.  **Get people ready to use AI tools safely** - hands-on with agentic
+    coding plus data-security literacy, so that both participants and
+    their data are AI-ready.
+
+## In one sentence
+
+A five-day working retreat that sends every WASH practitioner home
+having published an open, documented dataset and having learned the
+small set of skills, Git, Quarto, and safe AI use, that make their data
+reusable and AI-ready for the rest of their careers.

@@ -7,3 +7,6 @@
 /.quarto/
 *.html
 *_files/
+
+# sources (raw recordings and transcripts - contain candid internal notes)
+sources/

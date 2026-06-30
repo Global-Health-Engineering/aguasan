@@ -32,7 +32,7 @@ Curated reference material for the AGUASAN Workshop 2027 topic proposal on data,
 
 ## Case-study and external resources cited in the proposal draft
 
-These appear in the proposal draft (`../proposal/aguasan-workshop-2027-proposal.qmd`, sections 6.1 and 6.2) and are listed here for completeness.
+These appear in the proposal (`../proposal/README.qmd`, sections 6.1 and 6.2) and are listed here for completeness.
 
 - mWater (Malawi water-point mapping): https://www.mwater.co/
 - Cape Town open water data / dam levels: https://www.capetown.gov.za/ and https://waterdashboard.co.za/

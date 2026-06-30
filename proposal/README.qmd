@@ -16,18 +16,11 @@ format:
     toc: true
     number-sections: false
     geometry: margin=2.5cm
+  gfm:
+    toc: true
+    number-sections: false
 editor: visual
 ---
-
-::: callout-note
-## How to use this template
-
-Guidance is shown in *italics*. Replace the bracketed placeholders (`[...]`) with your text. Fields marked with an asterisk (**\***) are required. Aim for clarity over length; most fields need only a short paragraph.
-
-Render this document with `quarto render aguasan-workshop-2027-proposal-blank.qmd` or use the **Render** button in RStudio / VS Code. Output formats: HTML, Word (`.docx`), and PDF.
-
-When complete, return the document (or its Word export) to [roger.schmid\@skat.ch](mailto:roger.schmid@skat.ch) by **30 June 2026**.
-:::
 
 # About the call
 
@@ -70,7 +63,7 @@ Guidance is shown in *italics*; replace the bracketed placeholders with your tex
 ## 1. Proposer and organisation
 
 | Field | Your entry |
-|----|----|
+|------------------------------------|------------------------------------|
 | **Name \*** | Prof. Dr. Elizabeth Tilley & Lars Schöbitz |
 | **Organisation \*** | Global Health Engineering, ETH Zurich |
 | **Position / role** | Associate Professor & Data Steward |
@@ -121,6 +114,8 @@ Guidance is shown in *italics*; replace the bracketed placeholders with your tex
 > The Data Science for openwashdata course has run twice. The first iteration drew more than 200 registrations and produced 22 final capstone projects; the second drew more than 150 registrations and graduated 48 participants, each publishing a capstone project with a dataset of their choice. Alongside the course, funded data stewards were embedded inside partner organisations in Malawi and South Africa. The appetite for practical, open, reproducible data management skills, from individual learners to institutions, is already demonstrated.
 >
 > The interest is broad amongst sector professionals: the competencies apply in any context and the skills are transferable, because the workshop relies on free open source tooling that anyone can access without buying costly licenses.
+>
+> To measure demand directly, we would reuse the pre-courses survey developed for the second iteration of Data Science for openwashdata and published as an open source resource. The survey establishes a detailed baseline of participants' current digital skills, highlighting their specific strengths, gaps, and needs. The anonymised results would contribute to a better understanding of the skills and competencies that exist across the WASH sector.
 
 ### 4.2 Envisaged follow-up \*
 
@@ -162,6 +157,7 @@ Guidance is shown in *italics*; replace the bracketed placeholders with your tex
 - Quarto for collaborative scientific writing (workshop, ready to revise and teach): <https://quarto-rdmss-26.github.io/website/>
 - AI agents for scientists (workshop, under development, potential follow-up): <https://github.com/agentsforsci>
 - Data Science for openwashdata course (course, ready to revise and teach as follow-up): <https://ds4owd-002.github.io/website/>
+- Data Science for openwashdata pre-course-survey (open source, revised version will be used for workshop participants): <https://github.com/ds4owd-dev/pre-course-survey>
 - FAIRqual project website: <https://fairqual.org/>
 - openwashdata newsletter (\> 200 subscribers): <https://buttondown.com/openwashdata/archive>
 - A vision for open science and data stewardship at ETH Zurich (interview). Surfaces the rationale for "open by default" and what a dedicated data steward actually does inside a research group: <https://library.ethz.ch/en/about-us-and-locations/news/news-articles/2023/03/interview-eine-vision-fuer-open-science-and-data-stewardship-an-der-eth-zuerich.html>

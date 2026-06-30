@@ -1,6 +1,6 @@
-# Data, Digitization, and AI in WASH
+# Publishing WASH Data Together
 Lars Schöbitz, ETH Zurich
-2026-06-24
+2026-06-30
 
 - [The problem](#the-problem)
 - [The vision it builds on](#the-vision-it-builds-on)
@@ -180,15 +180,10 @@ The workshop is a gateway, not an endpoint:
 
 ## Objectives
 
-1.  **Equip WASH practitioners to collaborate on GitHub** - the shared
-    foundation of Git, GitHub, and Quarto for working openly and
-    reproducibly, and the precondition for safe AI use.
-2.  **Publish participants’ own data openly** - everyone leaves having
-    published a documented dataset following the openwashdata workflow,
-    adding to the sector’s body of FAIR, reusable data.
-3.  **Get people ready to use AI tools safely** - hands-on with agentic
-    coding plus data-security literacy, so that both participants and
-    their data are AI-ready.
+The workshop-level learning goals are maintained as a working draft in
+[`learning-objectives-draft.qmd`](learning-objectives-draft.qmd), to be
+broken down into more granular objectives for each module, talk, and
+session.
 
 ## In one sentence
 

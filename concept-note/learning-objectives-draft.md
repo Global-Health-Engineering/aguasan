@@ -1,0 +1,65 @@
+# Draft Learning Objectives
+Lars Schöbitz, ETH Zurich
+2026-06-30
+
+- [1. Publish a dataset openly and make it
+  FAIR](#1-publish-a-dataset-openly-and-make-it-fair)
+- [2. Work reproducibly with open
+  tools](#2-work-reproducibly-with-open-tools)
+- [3. Make data AI-ready and judge AI’s role
+  critically](#3-make-data-ai-ready-and-judge-ais-role-critically)
+- [4. Carry open data practice back into your own
+  organisation](#4-carry-open-data-practice-back-into-your-own-organisation)
+
+These are draft goals at the workshop level. Each pairs a mindset shift
+with a concrete capability, matching the hands-on retreat framing. Break
+each one down into more granular objectives for the individual modules,
+talks, and working sessions.
+
+## 1. Publish a dataset openly and make it FAIR
+
+By the end of the week, each participant has taken a dataset of their
+own from raw files to a documented, openly licensed, archived data
+package with a DOI, applying FAIR principles (findable, accessible,
+interoperable, reusable) to their own work rather than in the abstract.
+
+- Maps to: the openwashdata publishing workflow and the Data Science for
+  openwashdata course.
+- Core deliverable of the week: the published dataset.
+
+## 2. Work reproducibly with open tools
+
+Participants gain working fluency in a small, durable, license-free
+toolset (Git and GitHub for version control and collaboration, Quarto
+for reproducible documentation) and can explain why these lower the
+barrier to sharing, so the skills transfer to any context and outlive
+the workshop.
+
+- Maps to: the Git for scientists and Quarto for collaborative
+  scientific writing workshops.
+- Reinforces transferability: the tooling is free and open, usable in
+  any context without costly licenses.
+
+## 3. Make data AI-ready and judge AI’s role critically
+
+Participants understand what makes data usable by AI agents (clean
+structure, documentation, machine-readable formats, clear licensing) and
+can use AI tools to support data work while recognising their limits,
+shifting the question from “can a machine do this?” to “is my data ready
+for it?”
+
+- Maps to: the AI agents for scientists material under development.
+- The timeliness hook that distinguishes this from a generic
+  data-management workshop.
+
+## 4. Carry open data practice back into your own organisation
+
+Participants leave with a concrete plan for embedding open, reproducible
+data practice in their own institution: which datasets to publish next,
+which tools to adopt, and what habits to sustain, so the workshop’s
+effect outlasts the week and reaches colleagues who did not attend.
+
+- Maps to: the envisaged follow-up (section 4.2) and the expected
+  outcomes (section 5.1) in the proposal.
+- The institutional and sustainability axis: turns individual skill into
+  organisational change.

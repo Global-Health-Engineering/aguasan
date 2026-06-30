@@ -8,7 +8,7 @@ For the full rationale, vision, and supporting evidence, see the [concept note](
 
 ```
 .
-├── proposal/        The proposal itself and the official call
+├── proposal/        The proposal (source and rendered output)
 ├── concept-note/    Standalone 1-page concept note (topic-only, no template)
 ├── references/      Curated reference material (web sources + index)
 ├── sources/         Source recordings and transcripts (local only, not tracked)
@@ -20,7 +20,6 @@ For the full rationale, vision, and supporting evidence, see the [concept note](
 
 - `README.qmd` - the proposal, filled in from the concept note. This is the version to submit.
 - `README.md` - the rendered GFM output, so the proposal displays on GitHub when browsing the `proposal/` folder.
-- `aguasan-workshop-2027-call-for-proposals.docx` - the official call document received from the organisers.
 
 ### `concept-note/`
 

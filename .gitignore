@@ -10,3 +10,6 @@
 
 # sources (raw recordings and transcripts - contain candid internal notes)
 sources/
+
+# file formats
+*.docx

@@ -22,16 +22,6 @@ format:
 editor: visual
 ---
 
-::: callout-note
-## How to use this template
-
-Guidance is shown in *italics*. Replace the bracketed placeholders (`[...]`) with your text. Fields marked with an asterisk (**\***) are required. Aim for clarity over length; most fields need only a short paragraph.
-
-Render this document with `quarto render aguasan-workshop-2027-proposal-blank.qmd` or use the **Render** button in RStudio / VS Code. Output formats: HTML, Word (`.docx`), and PDF.
-
-When complete, return the document (or its Word export) to [roger.schmid\@skat.ch](mailto:roger.schmid@skat.ch) by **30 June 2026**.
-:::
-
 # About the call
 
 The [AGUASAN Community of Practice (CoP)](http://www.aguasan.ch) is an interdisciplinary Swiss community of specialists in the field of water and sanitation within the framework of international cooperation. It meets regularly for knowledge exchange and, among its activities, organises the AGUASAN Workshop Series. **Since 1984, AGUASAN Workshops have been a key forum for experience sharing and knowledge generation** of the Swiss international cooperation in water.[^1] Each edition brings together, over 5 days, up to 50 practitioners from development, humanitarian aid, research, and policy for an intensive week of structured discussion around a single, current topic. Working from real case studies, participants reflect collectively and develop practical approaches, tools, and pathways they can carry back into their own work. Funded by the SDC, AGUASAN Workshops constitute an essential link in the agency's thematic knowledge management strategy and processes.

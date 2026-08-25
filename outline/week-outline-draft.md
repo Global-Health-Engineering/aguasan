@@ -118,7 +118,16 @@ Precourse dependency: the Git and GitHub modules assume the precourse work is do
 
 ### Friday
 
-To be dictated.
+| Time | Block |
+|---|---|
+| 09:00 to 11:30 | Quarto website workshop (the RDMSS workshop, slightly extended to 2.5 hours) |
+| 13:00 to 14:00 | Optional AI session: craft the personal website and publish it (for participants who brought their CVs to the morning workshop) |
+| 14:00 to 15:00 | Closing session: the week summarized through the outputs that were created, and commitment confirmed for the coming R data science class (ds4owd-003) |
+| 15:00 | Close, end of the week |
+
+- The CV option: participants can bring their CVs to the morning workshop and then use the afternoon AI session to craft their website and publish it the same day.
+- Friday closes at 15:00 rather than 16:30, travel-friendly, mirroring the Monday arrival buffer.
+- The afternoon split (13:00/14:00) is a placement, to confirm; dictated fixed points are the 2.5-hour morning workshop, the strong closing session, and the 15:00 close.
 
 ## Post-workshop follow-up (immediate)
 

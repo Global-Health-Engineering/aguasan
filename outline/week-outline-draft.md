@@ -109,7 +109,12 @@ Precourse dependency: the Git and GitHub modules assume the precourse work is do
 ### Thursday
 
 - Morning: selected participants share their work as case studies created in the workshop, invited on the basis of the Wednesday progress review.
-- Rest of the day: to be dictated.
+
+| Time | Block |
+|---|---|
+| 13:00 to 15:00 | Work session (personal data projects) |
+| 15:00 to 16:30 | Case study |
+| 16:30 | Close |
 
 ### Friday
 

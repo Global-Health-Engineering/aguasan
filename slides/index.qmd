@@ -15,6 +15,45 @@ format:
     hash: true
     filters:
       - roughnotation
+    include-after-body:
+      text: |
+        <script>
+        // The roughnotation extension only draws .rn annotations on the R
+        // key; draw them automatically when their slide is shown instead
+        // (the a/b/c kicker boxes rely on this).
+        window.addEventListener("load", function () {
+          if (!window.Reveal || !window.RoughNotation) return;
+          var annotated = new Map();
+          function annotateCurrent(slide) {
+            if (!slide) return;
+            slide.querySelectorAll(".rn").forEach(function (el) {
+              if (!annotated.has(el)) {
+                annotated.set(el, RoughNotation.annotate(el, {
+                  type: el.dataset.rnType || "box",
+                  animate: true,
+                  animationDuration: 600,
+                  color: el.dataset.rnColor || "#5b195b",
+                  strokeWidth: parseInt(el.dataset.rnStrokewidth, 10) || 2,
+                  padding: parseInt(el.dataset.rnPadding, 10) || 5,
+                  multiline: true,
+                  iterations: 2
+                }));
+              }
+              var a = annotated.get(el);
+              a.show();
+              if (a._svg) {
+                a._svg.style.transform = "scale(" + 1 / Reveal.getScale() + ")";
+                a._svg.style.transformOrigin = "top left";
+              }
+            });
+          }
+          Reveal.on("slidechanged", function (e) { annotateCurrent(e.currentSlide); });
+          Reveal.on("ready", function (e) { annotateCurrent(e.currentSlide); });
+          if (Reveal.isReady && Reveal.isReady()) {
+            annotateCurrent(Reveal.getCurrentSlide());
+          }
+        });
+        </script>
 execute:
   echo: false
   warning: false
@@ -204,7 +243,7 @@ plot_routes <- function(base_size, label_size, show_caption) {
     labs(
       x = NULL, y = NULL,
       title = paste0(
-        "Data almost never reaches an open repository,\n",
+        "Data almost never reaches an open repository, ",
         "unless the journal asks and supports"
       ),
       subtitle = paste0(
@@ -221,13 +260,13 @@ plot_routes <- function(base_size, label_size, show_caption) {
       panel.grid = element_blank(),
       axis.text.x = element_blank(),
       axis.text.y = element_text(colour = ink, lineheight = 0.92),
-      plot.title = element_text(face = "bold", size = base_size * 0.95),
-      plot.subtitle = element_text(colour = muted, size = base_size * 0.68),
+      plot.title = element_text(face = "bold", size = base_size * 0.78),
+      plot.subtitle = element_text(colour = muted, size = base_size * 0.64),
       plot.title.position = "plot",
-      legend.position = "bottom",
+      legend.position = "top",
       legend.location = "plot",
       legend.justification = "left",
-      legend.margin = margin(2, 0, 0, 0),
+      legend.margin = margin(2, 0, 2, 0),
       legend.text = element_text(size = base_size * 0.62),
       legend.key.size = unit(0.55, "cm"),
       plot.caption = element_text(colour = muted, size = 12, hjust = 0),
@@ -236,8 +275,7 @@ plot_routes <- function(base_size, label_size, show_caption) {
     )
   if (show_caption) {
     p <- p + labs(caption = paste0(
-      "Data: openwashdata/washopenresearch (CC BY 4.0). PLOS Water: ",
-      "research articles only."
+      "Data: https://github.com/openwashdata/washopenresearch (CC BY 4.0)."
     ))
   }
   p
@@ -324,7 +362,9 @@ plot_formats <- function(base_size, label_size) {
         "Share of the ", fmt(n_supp), " papers with supplementary files; ",
         "one paper can attach several formats"
       ),
-      caption = "Data: openwashdata/washopenresearch (CC BY 4.0)."
+      caption = paste0(
+        "Data: https://github.com/openwashdata/washopenresearch (CC BY 4.0)."
+      )
     ) +
     theme_minimal(base_size = base_size) +
     theme(
@@ -334,143 +374,15 @@ plot_formats <- function(base_size, label_size) {
       panel.grid = element_blank(),
       axis.text.x = element_blank(),
       axis.text.y = element_text(colour = ink),
-      plot.title = element_text(face = "bold", size = base_size * 0.95),
-      plot.subtitle = element_text(colour = muted, size = base_size * 0.68),
+      plot.title = element_text(face = "bold", size = base_size * 0.78),
+      plot.subtitle = element_text(colour = muted, size = base_size * 0.64),
+      plot.title.position = "plot",
       plot.caption = element_text(colour = muted, size = 12, hjust = 0),
+      plot.caption.position = "plot",
       plot.margin = margin(4, 10, 2, 4)
     )
 }
 
-# The sector's entire stock of data papers in dedicated data journals,
-# from the package's datapapers dataset and the journal list its
-# acquisition scripts query (data-raw/helpers.R). Spoken on the
-# distillation slide.
-helpers_env <- new.env()
-source(file.path(pkg_path, "data-raw", "helpers.R"), local = helpers_env)
-n_dp_journals <- nrow(helpers_env$datapapers_journals())
-n_dp <- nrow(datapapers)
-
-# The retreat's committed output range, from the proposal (section 5.1 of
-# proposal/README.qmd).
-target_lo <- 30
-target_hi <- 50
-
-# Alex's retreat week in quarter-day blocks: the indicative rhythm from the
-# concept note. Taught blocks Monday, Tuesday, and Friday; keynote slots
-# hold space for the other proposals (polycrisis opening, digital tools,
-# closing synthesis); individual work with short participant presentations
-# Tuesday and Thursday; rest designed in across the week.
-week_df <- tibble::tribble(
-  ~day, ~slot, ~activity, ~detail,
-  "Monday", "Morning 1", "Keynote",
-  "Opening keynote: space for the polycrisis diagnosis from the other proposals; it names the storm the week answers.",
-  "Monday", "Morning 2", "Taught block",
-  "Foundations from existing open educational resources: Git and GitHub, and the shared cloud environment everyone starts in.",
-  "Monday", "Afternoon 1", "Taught block",
-  "The data package: structure, documentation, and an open license.",
-  "Monday", "Afternoon 2", "Individual work",
-  "First steps on her own dataset, with the setup from the pre-work.",
-  "Tuesday", "Morning 1", "Taught block",
-  "Quarto (alternative to MS Word): documentation that is reproducible instead of static.",
-  "Tuesday", "Morning 2", "Individual work",
-  "Alex works on her own dataset with support in the room.",
-  "Tuesday", "Afternoon 1", "Individual work + presentations",
-  "Short participant presentations bring input from the room.",
-  "Tuesday", "Afternoon 2", "Rest and connection",
-  "Designed in, not left over: human connection and skill sharing bridge the thematic work.",
-  "Wednesday", "Morning 1", "Keynote",
-  "Space for a keynote from the digital-tools proposal: collection to publication as one value chain.",
-  "Wednesday", "Morning 2", "Individual work",
-  "Heads-down packaging: agents take the repetitive file and documentation work, Alex makes the decisions.",
-  "Wednesday", "Afternoon 1", "Rest and connection",
-  "A retreat afternoon: an excursion, a walk, time away from screens.",
-  "Wednesday", "Afternoon 2", "Rest and connection",
-  "Unstructured time: the packages rest, the people connect.",
-  "Thursday", "Morning 1", "Individual work + presentations",
-  "Alex presents her progress and gets input before the final push.",
-  "Thursday", "Morning 2", "Individual work",
-  "Documentation and review, with support where it is needed.",
-  "Thursday", "Afternoon 1", "Individual work",
-  "The final push on the package.",
-  "Thursday", "Afternoon 2", "Rest and connection",
-  "Time to recover before the closing day.",
-  "Friday", "Morning 1", "Taught block",
-  "Safe and confident work with AI agents, and each participant's next steps at home.",
-  "Friday", "Morning 2", "Taught block",
-  "Publish: the packages come together on shared GitHub infrastructure.",
-  "Friday", "Afternoon 1", "Keynote",
-  "Closing synthesis: space for the workforce and after-the-aid-era questions from the other proposals.",
-  "Friday", "Afternoon 2", "Rest and connection",
-  "Farewell: the week closes as a community."
-)
-
-write_csv(week_df, "week-schedule.csv")
-
-# Inline copy for the ojs cells, so the chart still has data when the CSV
-# fetch is blocked.
-ojs_define(week_inline = week_df)
-
-activity_levels <- c(
-  "Keynote", "Taught block", "Individual work + presentations",
-  "Individual work", "Rest and connection"
-)
-activity_colors <- c("#c14a09", "#5b195b", "#272bd1", "#6e6a63", "#c8a3c8")
-names(activity_colors) <- activity_levels
-
-alt_week <- paste0(
-  "Grid of Alex's retreat week, five days in quarter-day blocks. Keynote ",
-  "slots hold space for the other proposals on Monday morning, Wednesday ",
-  "morning, and as the closing synthesis on Friday afternoon. Taught ",
-  "workshop blocks sit on Monday, Tuesday morning, and Friday morning. ",
-  "Individual work with short participant presentations sits on Tuesday ",
-  "afternoon and Thursday morning, individual work across Monday, Tuesday, ",
-  "Wednesday, and Thursday, and rest and connection on Tuesday, Wednesday, ",
-  "Thursday, and Friday afternoons."
-)
-
-# Static twin of the interactive OJS week chart, swapped in when the deck
-# is opened from disk, where browsers block the OJS module runtime.
-p_week_fallback <- week_df |>
-  mutate(
-    day = factor(day, levels = unique(week_df$day)),
-    slot = factor(
-      slot,
-      levels = c("Afternoon 2", "Afternoon 1", "Morning 2", "Morning 1")
-    ),
-    activity = factor(activity, levels = activity_levels),
-    cell_label = if_else(
-      activity == "Individual work + presentations",
-      "Individual + input", as.character(activity)
-    )
-  ) |>
-  ggplot(aes(x = day, y = slot, fill = activity)) +
-  geom_tile(colour = paper, linewidth = 2.4) +
-  geom_text(
-    aes(
-      label = str_wrap(cell_label, 14),
-      colour = activity == "Rest and connection"
-    ),
-    size = 4.6, lineheight = 0.92, fontface = "bold"
-  ) +
-  scale_fill_manual(values = activity_colors, guide = "none") +
-  scale_colour_manual(
-    values = c(`TRUE` = ink, `FALSE` = paper), guide = "none"
-  ) +
-  scale_x_discrete(position = "top", expand = c(0, 0)) +
-  scale_y_discrete(expand = c(0, 0)) +
-  labs(x = NULL, y = NULL) +
-  theme_minimal(base_size = 22) +
-  theme(
-    plot.background = element_rect(fill = paper, colour = NA),
-    panel.background = element_rect(fill = paper, colour = NA),
-    panel.grid = element_blank(),
-    axis.text = element_text(colour = ink, face = "bold"),
-    axis.text.y = element_text(size = 15),
-    plot.margin = margin(6, 6, 6, 6)
-  )
-
-ggsave("week-fallback.png", p_week_fallback,
-       width = 12.6, height = 5.0, dpi = 150, bg = paper)
 ```
 
 ::: {.kicker}
@@ -500,19 +412,27 @@ Controlling idea: the sector can no longer afford closed data, and one retreat w
 
 Budget 0:35, cumulative 0:35.
 
-Everyone in this room is managing the same storm: budgets cut, programmes closing, good people leaving the sector. So let me pitch our topic through one of those people. Call her Alex. She's a composite of the practitioners in our two course cohorts, not one real person, and her situation is everywhere. Fifteen years in WASH programmes. Last year the funding collapsed. And years of collected data sit on her desktop: surveys, monitoring rounds, a thesis. Our proposal, Publishing WASH Data Together, is about what happens next, for Alex and for that data.
+Thank you, Roger.
+
+Everyone in this room is managing the same issues: budgets cut, programmes closing, good people leaving the sector.
+
+So let me pitch our topic through one of those people. I call her Alex and she's a composite of the practitioners in our two course cohorts. Not one real person but her situation is everywhere.
+
+Fifteen years in WASH programmes. Last year the funding collapsed and years of collected data sit on her desktop: surveys, monitoring rounds, a thesis.
+
+Our proposal, Publishing WASH Data Together, is about what happens next, for Alex and for that data.
 :::
 
 ## Where is Alex's data supposed to go? {#why-now}
 
-::: {.kicker .kicker-a}
-a\) Why this topic, why now
+::: {.kicker-q}
+[a\) Why this topic, why now]{.rn rn-type="box" rn-color="#5b195b" rn-strokewidth="2" rn-padding="6"}
 :::
 
 ```{r}
 #| label: chart-routes
 #| fig-width: 13
-#| fig-height: 5.3
+#| fig-height: 4.4
 #| fig-dpi: 160
 #| out-width: "100%"
 #| fig-alt: !expr alt_routes
@@ -525,15 +445,20 @@ Without a journal that asks and supports: [1 in `r one_in_noenf`]{.rn-fragment r
 ::: {.notes}
 Budget 0:45, cumulative 1:20.
 
-Question a: why now? Start with where Alex's data could even go. We screened `r fmt(n_screened)` articles across four WASH journals; every number here is computed live from our open washopenresearch package, so anyone can re-run it. In the three journals without an enforced data policy, `r fmt(n_noenf_open)` of `r fmt(n_noenf)` articles point to data in an open repository. Press once for the circle. That is one in `r one_in_noenf`. SLOW DOWN on this number, it carries the circle, let it land. BREATH POINT.
+Question a: why now? Let's start with where Alex's data could even go. We screened about `r fmt(n_screened)` articles across four WASH journals.
 
-And journals are only the visible tip; most data, like Alex's, never reaches a paper at all. Not unwillingness: no credit, no time, no reward. So every question in this sector reopens as "more research is needed", when the answer often already exists. Now the last bar. PLOS Water asks and supports, and over half its articles reach a repository, one in `r one_in_plos`. Asking plus support works. A workshop is exactly that.
+An open repository, separate from the journal article, would be considered best practice. PLOS Water has an enforced data policy, resulting in 1 of 2 papers deposited. Our proposal is exactly that: ask and support.
+
+In the three journals without an enforced data policy, `r fmt(n_noenf_open)` of `r fmt(n_noenf)` articles point to data in an open repository. CLICK. That is one in `r one_in_noenf`. SLOW DOWN on this number, it carries the circle, let it land. BREATH POINT.
+
+And journals are only what is visible. Most data, like Alex's, never reaches a paper at all. It's no unwillingness: no credit, no time, no reward.
+
 :::
 
 ## When files are attached, what are they? {#formats}
 
-::: {.kicker .kicker-a}
-a\) Why this topic, why now
+::: {.kicker-q}
+[a\) Why this topic, why now]{.rn rn-type="box" rn-color="#5b195b" rn-strokewidth="2" rn-padding="6"}
 :::
 
 ```{r}
@@ -547,332 +472,137 @@ a\) Why this topic, why now
 plot_formats(base_size = 22, label_size = 6.6)
 ```
 
-Only CSV is machine readable and non proprietary, and [a CSV without documentation is still closed data]{.rn-fragment rn-type="underline" rn-color="#5b195b" rn-strokewidth="3"}.
+Only CSV is machine readable and non proprietary. [A CSV without documentation is still closed data]{.rn-fragment rn-type="underline" rn-color="#5b195b" rn-strokewidth="3"}.
 
 ::: {.notes}
 Budget 0:30, cumulative 1:50.
 
-One more beat on question a. When articles do attach something as data, this is what it is: mostly Word documents and PDFs, tables your eyes can read and no computer can. AI can only use what it can read, and neither can your colleagues. The one format here that qualifies as good sharing practice, machine readable and non proprietary, is CSV, the accent bar. And now the harder half. Press once for the underline. Words and commas without documentation are still closed data; a CSV nobody can interpret helps nobody. Documented, described, reusable is the actual bar, and that is exactly what the retreat teaches.
+When articles do attach something as data, this is what it is: mostly Word documents and PDFs, tables that your eyes can read and no computer can.
 
-OPTIONAL BEAT, if pace allows, otherwise hold for the Q&A window: and before anyone credits the repository pointers from the last slide, we followed every one of them; about one in five is dead, and most deposits we could open hold archives with no machine-readable file and no README. The format and documentation problem follows the data wherever it goes.
+The one format here that qualifies as good sharing practice, machine readable and non proprietary, is CSV, the small purple accent bar.
+
+Press once for the underline.
+
+However, words and commas without documentation are still closed data; a CSV nobody can interpret because we don't know what's in the columns helps nobody. Documented, described, reusable is the actual bar, and that is exactly what the retreat teaches.
+
+OPTIONAL BEAT, if pace allows, otherwise hold for the Q&A window:
+
+And before anyone credits the repository pointers from the last slide, we followed every one of them; about one in five is dead, and most deposits we could open hold archives with no machine-readable file and no README. The format and documentation problem follows the data wherever it goes.
 :::
 
 ## Why AGUASAN, and why 2027 {#why-aguasan}
 
-::: {.kicker .kicker-a}
-a\) Why as an AGUASAN Workshop
+::: {.kicker-q}
+[a\) Why as an AGUASAN Workshop]{.rn rn-type="box" rn-color="#5b195b" rn-strokewidth="2" rn-padding="6"}
 :::
 
-- The 40th AGUASAN Workshop: the community of practice, hosted by the SDC, that shapes the WASH sector's practice, and the participants are the people who hold the data
-- The retreat format is the method: a week of hands-on practical workshops, not a lecture series
-- 2023 to 2026: five ETH Board Open Research Data projects, about CHF 500,000, the National Prize for Open Research Data 2024, 51 published datasets
-- The funding window closes in 2026: AGUASAN is the bridge from a funded programme to standing sector practice
+- **The 40th AGUASAN Workshop:** the community of practice, hosted by the SDC, that shapes the WASH sector's practice, and the participants are the people who hold the data
+- **The retreat format is the method:** a week of hands-on practical workshops, not a lecture series
+- **The funding window closes in 2026:** five ETH Board Open Research Data projects, about CHF 500,000, the 2024 National Prize, 51 published datasets; AGUASAN is the bridge from a funded programme to standing sector practice
 
 ::: {.notes}
 Budget 0:30, cumulative 2:20.
 
-Still question a: why AGUASAN, why 2027? The timing will not repeat. Five ETH Board Open Research Data projects, about half a million francs, built the machinery: community, workflow, a free academy, 51 published datasets, the National Prize for Open Research Data 2024. That window closes in 2026. AGUASAN buys the room and the reach; the machinery is already paid for. With the Swiss Water Partnership, it is also the route into the wider community; a mandate here is demonstrated demand in every next funding application.
+Still question a: why AGUASAN, why 2027? The timing will not repeat. Five ETH Board Open Research Data projects with about half a million francs in funding. We have built the machinery: a community, workflows, tools, a free academy, and 51 published datasets. 
+
+That funding window closes in 2026. AGUASAN buys us the room and the reach. With the Swiss Water Partnership, it is also the route into the wider community; a mandate here is demonstrated demand in every next funding application.
 :::
 
 ## Alex signs up: the work starts four weeks early {#prework}
 
-::: {.kicker .kicker-b}
-b\) What participants take away
+::: {.kicker-q}
+[b\) What participants take away]{.rn rn-type="box" rn-color="#272bd1" rn-strokewidth="2" rn-padding="6"}
 :::
 
-- Months before the workshop: the signup form asks for her dataset, screened before acceptance; data is the entry ticket
-- At least four weeks of pre-work with individual support: accounts, setup, documentation, permissions
-- No coding background required: designed for novices, and a shared cloud environment gives everyone the same start
-- Qualitative data is welcome: the FAIRqual project built the experience for the harder cases
+- **Months before the workshop:** the signup form asks for her dataset, screened before acceptance; data is the entry ticket
+- **At least four weeks of pre-work with individual support:** accounts, setup, documentation, permissions
+- **No coding background required:** designed for novices, and a shared cloud environment gives everyone the same start
+- **Qualitative data is welcome:** the FAIRqual project built the experience for the harder cases
 
 ::: {.notes}
 Budget 0:25, cumulative 2:45.
 
-Now question b: what does Alex take away? Months before the workshop, the signup form asks for her dataset, screened before acceptance; data is the entry ticket, and any dataset counts: surveys, monitoring rounds, lab results, and, through our FAIRqual experience, qualitative material too. Then at least four weeks of supported pre-work: accounts, setup, documentation, permissions, settled before arrival. Nobody arrives as a coder; the week is designed for novices, a shared cloud environment gives everyone the same start on free and open tools, and AI access for those who can't pay for licenses is worked out together.
+Now question b: what does Alex take away? Months before the workshop, the signup form asks for her dataset, which is screened before acceptance. The data is the entry ticket and any dataset counts: surveys, monitoring rounds, lab results, and qualitative material, such as audio recordings.
+
+Then at least four weeks of supported pre-work: accounts, setup, documentation, permissions, all settled before arrival. Nobody arrives as a coder; the week is designed for novices.
 :::
 
-## Alex's retreat week {#week}
+## What Alex takes home {#takeaway}
 
-::: {.kicker .kicker-b}
-b\) What participants take away
+::: {.kicker-q}
+[b\) What participants take away]{.rn rn-type="box" rn-color="#272bd1" rn-strokewidth="2" rn-padding="6"}
 :::
 
-::: {#ojs-week-wrap}
-
-```{ojs}
-//| echo: false
-week = {
-  // Prefer the CSV shipped with the deck; fall back to the data inlined at
-  // render time when the fetch is blocked.
-  try {
-    return await FileAttachment("week-schedule.csv").csv({ typed: true });
-  } catch (e) {
-    return transpose(week_inline);
-  }
-}
-```
-
-```{ojs}
-//| echo: false
-d3 = require("d3")
-
-activityOrder = [
-  "Keynote",
-  "Taught block",
-  "Individual work + presentations",
-  "Individual work",
-  "Rest and connection"
-]
-
-activityColors = ["#c14a09", "#5b195b", "#272bd1", "#6e6a63", "#c8a3c8"]
-
-{
-  // Hand-written D3 week grid: scales, axes, and joins built directly,
-  // no Observable Plot.
-  const width = 1080;
-  const height = 440;
-  const margin = { top: 40, right: 8, bottom: 8, left: 132 };
-  const ink = "#1e1e1e";
-  const paper = "#f5eef5";
-
-  // Ordinal color scale: one color per activity type.
-  const color = d3.scaleOrdinal(activityOrder, activityColors);
-
-  // Band scales: days across the top, quarter-day slots down the side.
-  const days = [...new Set(week.map((d) => d.day))];
-  const slots = ["Morning 1", "Morning 2", "Afternoon 1", "Afternoon 2"];
-  const x = d3
-    .scaleBand(days, [margin.left, width - margin.right])
-    .paddingInner(0.04);
-  const y = d3
-    .scaleBand(slots, [margin.top, height - margin.bottom])
-    .paddingInner(0.06);
-
-  const wrap = d3
-    .create("div")
-    .style("position", "relative")
-    .style("max-width", width + "px");
-
-  // Legend above the grid, one swatch per activity type.
-  const legend = wrap
-    .append("div")
-    .style("display", "flex")
-    .style("flex-wrap", "wrap")
-    .style("gap", "6px 24px")
-    .style("margin", "0 0 10px " + margin.left + "px")
-    .style("font-size", "16px")
-    .style("color", ink);
-  for (const act of activityOrder) {
-    const item = legend
-      .append("span")
-      .style("display", "inline-flex")
-      .style("align-items", "center")
-      .style("gap", "8px");
-    item
-      .append("span")
-      .style("width", "15px")
-      .style("height", "15px")
-      .style("flex", "none")
-      .style("border", "1px solid #a9a294")
-      .style("background", color(act));
-    item.append("span").text(act);
-  }
-
-  const svg = wrap
-    .append("svg")
-    .attr("viewBox", [0, 0, width, height])
-    .attr("width", width)
-    .attr("height", height)
-    .style("max-width", "100%")
-    .style("height", "auto")
-    .attr("role", "img")
-    .attr("aria-label", "Alex's retreat week as a five-day grid");
-
-  svg
-    .append("desc")
-    .text(
-      "Grid of the retreat week, five days in quarter-day blocks. " +
-        "Keynote slots hold space for the other proposals on Monday " +
-        "morning, Wednesday morning, and Friday afternoon. Taught " +
-        "workshop blocks sit on Monday, Tuesday morning, and Friday " +
-        "morning. Individual work with participant presentations sits on " +
-        "Tuesday afternoon and Thursday morning, individual work across " +
-        "the mid-week, and rest and connection on Tuesday, Wednesday, " +
-        "Thursday, and Friday afternoons. Hover a block for what Alex " +
-        "is doing."
-    );
-
-  // Data join: one cell per half-day block.
-  const cells = svg
-    .append("g")
-    .selectAll("rect")
-    .data(week)
-    .join("rect")
-    .attr("x", (d) => x(d.day))
-    .attr("y", (d) => y(d.slot))
-    .attr("width", x.bandwidth())
-    .attr("height", y.bandwidth())
-    .attr("rx", 4)
-    .attr("stroke", "#cdc7bd")
-    .attr("stroke-width", 1)
-    .attr("fill", (d) => color(d.activity));
-
-  // Short label inside each cell; dark text on the one light category.
-  svg
-    .append("g")
-    .selectAll("text")
-    .data(week)
-    .join("text")
-    .attr("x", (d) => x(d.day) + x.bandwidth() / 2)
-    .attr("y", (d) => y(d.slot) + y.bandwidth() / 2)
-    .attr("text-anchor", "middle")
-    .attr("dominant-baseline", "middle")
-    .attr("fill", (d) => (d.activity === "Rest and connection" ? ink : paper))
-    .style("font-size", "15px")
-    .style("font-weight", "600")
-    .style("pointer-events", "none")
-    .text((d) =>
-      d.activity === "Individual work + presentations"
-        ? "Individual + input"
-        : d.activity
-    );
-
-  // Day axis along the top, band scale, no tick lines.
-  const xAxis = svg
-    .append("g")
-    .attr("transform", `translate(0,${margin.top})`)
-    .call(d3.axisTop(x).tickSize(0).tickPadding(10));
-  xAxis.selectAll("text")
-    .attr("fill", ink)
-    .style("font-size", "18px")
-    .style("font-weight", "700");
-  xAxis.select(".domain").remove();
-
-  // Slot axis on the left: morning and afternoon.
-  const yAxis = svg
-    .append("g")
-    .attr("transform", `translate(${margin.left},0)`)
-    .call(d3.axisLeft(y).tickSize(0).tickPadding(10));
-  yAxis.selectAll("text").attr("fill", ink).style("font-size", "17px");
-  yAxis.select(".domain").remove();
-
-  // Tooltip div, positioned at the pointer, filled from the block's detail.
-  const tooltip = wrap
-    .append("div")
-    .style("position", "absolute")
-    .style("pointer-events", "none")
-    .style("visibility", "hidden")
-    .style("max-width", "360px")
-    .style("background", "#ffffff")
-    .style("color", ink)
-    .style("border", "1px solid #cdc7bd")
-    .style("border-radius", "4px")
-    .style("padding", "7px 11px")
-    .style("font-size", "15px")
-    .style("line-height", "1.35")
-    .style("box-shadow", "0 1px 4px rgba(28, 26, 23, 0.18)")
-    .style("z-index", "10");
-
-  cells
-    .on("pointerenter pointermove", (event, d) => {
-      const [mx, my] = d3.pointer(event, wrap.node());
-      tooltip
-        .style("left", Math.min(mx + 14, width - 380) + "px")
-        .style("top", my + 12 + "px")
-        .style("visibility", "visible")
-        .html(`<strong>${d.day} ${d.slot.toLowerCase()}</strong><br>${d.detail}`);
-    })
-    .on("pointerleave", () => tooltip.style("visibility", "hidden"));
-
-  return wrap.node();
-}
-```
-
-:::
-
-```{=html}
-<img id="week-fallback" src="week-fallback.png"
-  alt="Grid of Alex's retreat week, five days in quarter-day blocks. Keynote slots hold space for the other proposals on Monday morning, Wednesday morning, and Friday afternoon. Taught workshop blocks sit on Monday, Tuesday morning, and Friday morning. Individual work with short participant presentations sits on Tuesday afternoon and Thursday morning, individual work across the mid-week, and rest and connection on Tuesday, Wednesday, Thursday, and Friday afternoons."
-  style="display:none; width:100%;">
-<script>
-// The OJS runtime is a module script, which browsers block on file://.
-// When the deck is opened from disk, swap in the static twin of the chart.
-if (window.location.protocol === "file:") {
-  var ojsWrap = document.getElementById("ojs-week-wrap");
-  if (ojsWrap) { ojsWrap.style.display = "none"; }
-  var fallbackImg = document.getElementById("week-fallback");
-  if (fallbackImg) { fallbackImg.style.display = "block"; }
-}
-</script>
-```
-
-::: {.small .muted}
-Indicative rhythm from the concept note. Hover a block for what Alex is doing.
-:::
+- **A published data package:** documented, openly licensed, citable with a DOI; final draft by Friday, archiving the final step
+- **[Skills that outlast any WASH job]{.rn-fragment rn-type="underline" rn-color="#5b195b" rn-strokewidth="3"}:** Git and GitHub, Quarto (alternative for MS Word), safe and confident work with AI agents
+- **A plan:** each participant leaves with concrete next steps for their own organisation
 
 ::: {.notes}
 Budget 0:35, cumulative 3:20.
 
-Here is Alex's week, in quarter-day blocks; the chart is interactive, hover any block. The orange slots hold space for the other proposals: an opening keynote for the polycrisis diagnosis, a mid-week keynote from the digital-tools side, and the closing synthesis. Taught blocks Monday, Tuesday, and Friday, built from open educational resources that already exist: Git and GitHub, and Quarto, an alternative to MS Word that makes documents reproducible instead of static. In between, individual work with input from short participant presentations, and rest and connection designed in across the week, not left over; this is a retreat, and we have run our own. By mid-week Alex's package takes shape: agents do the repetitive work, she makes every decision. That is why 30 to 50 documented packages by Friday is realistic for the room.
-:::
+Then Friday. What flies home with Alex? First, a data package: documented, openly licensed, citable, in final state by Friday. Her data stops being a folder on a desktop. BREATH POINT.
 
-## What flies home with Alex {#takeaway}
-
-::: {.kicker .kicker-b}
-b\) What participants take away
-:::
-
-- A published data package: documented, openly licensed, citable with a DOI; final draft by Friday, archiving the final step
-- [Skills that outlast any WASH job]{.rn-fragment rn-type="underline" rn-color="#5b195b" rn-strokewidth="3"}: Git and GitHub, Quarto (alternative for MS Word), safe and confident work with AI agents
-- The openwashdata community: graduates from two free course cohorts, 70 capstone projects, a data steward in Malawi
-- A plan: each participant leaves with concrete next steps for their own organisation
-
-::: {.notes}
-Budget 0:35, cumulative 3:55.
-
-Then Friday. What flies home with Alex? First, a data package: documented, openly licensed, citable, in final draft by Friday, with a DOI as the final archiving step. Her data stops being a folder on a desktop. BREATH POINT.
-
-Second, the heart of it: skills that outlast any WASH job. Press once for the underline. Git and GitHub, Quarto, an alternative for MS Word, and safe, confident work with AI agents. When funding shrinks, these keep people employable, inside the sector or beyond it. A colleague looked at a PhD dataset recently and said: a data paper of that data, I can do that now, everything. Third, the openwashdata community: graduates from two free cohorts, over 200 then over 150 registrations, 70 capstone projects, and a data steward in Malawi.
+Second, the heart of it: skills that outlast any WASH job. CLICK. Git and  GitHub, Quarto, which is an alternative for MS Word, and safe, confident work with AI agents. When funding shrinks, these skills keep people employable, inside the sector or beyond it.
 :::
 
 ## We carry it: before, during, after {#custodian}
 
-::: {.kicker .kicker-c}
-c\) Who convenes and follows up
+::: {.kicker-q}
+[c\) Who convenes and follows up]{.rn rn-type="box" rn-color="#c14a09" rn-strokewidth="2" rn-padding="6"}
 :::
 
-- Custodians: Elizabeth Tilley and Lars Schöbitz, Global Health Engineering, ETH Zurich
-- Certified teaching: Adriana Clavijo, full-time scientific assistant, Carpentries instructor; Lars, RStudio instructor; evidence-based, novice-first
-- Committed to all of it: October prep event, Steering Committee, case studies, presenting
-- A permanent ETH position carries the community beyond any grant
-- Follow-up: [a free third data science course teaching foundational R skills]{.rn-fragment rn-type="underline" rn-color="#5b195b" rn-strokewidth="3"}
+- **Custodians:** Elizabeth Tilley and Lars Schöbitz, Global Health Engineering, ETH Zurich
+- **Certified teaching:** Adriana Clavijo, full-time Scientific Assistant, Carpentries instructor; Lars, RStudio instructor; evidence-based, novice-first
+- **Committed to all of it:** October prep event, Steering Committee, case studies, presenting
+- **A permanent ETH position** carries the community beyond any grant
+- **Follow-up:** [a free third data science course teaching foundational R skills]{.rn-fragment rn-type="underline" rn-color="#5b195b" rn-strokewidth="3"}
 
 ::: {.notes}
-Budget 0:35, cumulative 4:30.
+Budget 0:35, cumulative 3:55.
 
-Question c: who carries it? We do. Elizabeth Tilley and Lars Schöbitz, Global Health Engineering, ETH Zurich, as custodians, committed to every contribution in the template, from the October preparatory event to the Steering Committee. And the teaching is professional: Adriana Clavijo, full time in our open science team, is a certified Carpentries instructor; I am a certified RStudio instructor; evidence-based teaching methods for technical topics, built for novice users. A permanent ETH position carries the community beyond any single grant, and the follow-up is concrete: press once for the underline, a free third data science course teaching foundational R skills. And the other proposals are allies: the polycrisis keynote names the storm Alex is in, the RWSN content folds into this week, and with the digital-tools proposal we share one value chain: they collect, we publish.
+Question c: who carries it? We do. Elizabeth Tilley and Lars Schöbitz, Global Health Engineering, ETH Zurich, as custodians, committed to every contribution in the template, from the October preparatory event to the Steering Committee.
+
+Our teaching is professional: Adriana Clavijo is a full time Scientific Assistant in our open science team. We are both certified instructors, and teach with evidence-based methods built for novices
+
+My permanent ETH position carries the community beyond any single grant and we will offer a concrete follow-up for all participants. CLICK. A free third data science course teaching foundational R skills.
+
+The other proposals are allies. We suggest a polycrisis keynote which names the storm Alex is in, the RWSN content folds into this week, and with the digital-tools proposal we share one data management chain: they propose a collection tool and we publish.
 :::
 
-## Publishing WASH Data Together {#one-slide}
+## Thanks [{{< fa sun >}}]{.accent} {#thanks}
+
+::: {.columns}
+::: {.column width="47%"}
 
 ::: {.kicker}
-The pitch on one slide
+References
 :::
 
-::: {.abc}
-[a) Why now.]{.q-a} Funding is collapsing while the sector's data stays closed: 1 in `r one_in_noenf` articles shares openly. Asking plus support works: 1 in `r one_in_plos`.
+- **Data and code:** [github.com/openwashdata/washopenresearch](https://github.com/openwashdata/washopenresearch)
+- **These slides:** published before the event, downloadable as PDF
+- **Built with Quarto and reveal.js:** [quarto.org/docs/presentations/revealjs](https://quarto.org/docs/presentations/revealjs/)
 
-[b) Take-away.]{.q-b} Every participant arrives with a dataset and leaves published: citable, documented, with skills that outlast any WASH job.
+:::
+::: {.column width="53%"}
 
-[c) Who.]{.q-c} Global Health Engineering, ETH Zurich: full custodianship, from the pre-work to the follow-up course.
+::: {.kicker}
+Resources
 :::
 
-::: {.closer}
-Send fifty Alexes home published.
+- **The openwashdata community:** [openwashdata.org](https://openwashdata.org)
+- **The FAIRqual project:**: [fairqual.org](https://fairqual.org)
+- **Two published dataset examples:** [fecalcanuga](https://openwashdata.github.io/fecalcanuga/) & [solidwastekampala](https://openwashdata.github.io/solidwastekampala/) and see [catalogue for all](https://openwashdata.org/pages/gallery/data/)
+- **Our newsletter (250 subscribers):** [buttondown.com/openwashdata/archive](https://buttondown.com/openwashdata/archive)
+
+:::
+:::
+
+::: {.foot}
+All material is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
 :::
 
 ::: {.notes}
-Budget 0:30, cumulative 5:00.
+Budget 0:30, cumulative 4:25.
 
-If you keep one slide, keep this one. One number for scale: the whole sector has published `r n_dp` data papers ever, across the `r n_dp_journals` dedicated data journals; one retreat week drafts `r target_lo` to `r target_hi`. Why now: one in `r one_in_noenf` shares its data openly today, and asking plus support fixes it. The take-away: arrive with a dataset, leave published, with skills that outlast any WASH job. Who: we carry it, from pre-work to the free follow-up course. Send fifty Alexes home published. Thank you.
+Thank you. Everything behind this pitch is open. Let's send fifty Alexes home with published data."
 :::

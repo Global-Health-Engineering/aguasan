@@ -112,7 +112,7 @@ Precourse dependency: the Git and GitHub modules assume the precourse work is do
 
 | Time | Block |
 |---|---|
-| 13:00 to 15:00 | Work session (personal data projects) |
+| 13:00 to 15:00 | Work session: draft the data management strategy outline or data management plan for the participant's own organisation |
 | 15:00 to 16:30 | Case study |
 | 16:30 | Close |
 
@@ -136,7 +136,7 @@ Every participant leaves with:
 - Their dataset published as a documented data package (draft state by Friday, DOI archiving supported after the week).
 - Durable skills: Git, GitHub, Quarto, FAIR data handling, safe work with agentic AI.
 - A personal website, published on Friday.
-- A draft plan for their own organisation: a data management strategy outline or data management plan, developed during the week's work sessions so the practice transfers home (which work-session slots carry this: to place).
+- A draft plan for their own organisation: a data management strategy outline or data management plan, drafted in the Thursday afternoon work session so the practice transfers home.
 - The enrollment path into ds4owd-003.
 
 Scope decision (2026-08-25): keynotes and a closing capacity-development brief are out of the outline; the per-participant organisational plan takes their place as the priority output.

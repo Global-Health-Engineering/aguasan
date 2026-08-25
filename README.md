@@ -9,6 +9,7 @@ For the full rationale, vision, and supporting evidence, see the [concept note](
 ```
 .
 ├── proposal/        The proposal (source and rendered output)
+├── slides/          Pitch slides for the topic selection session
 ├── concept-note/    Standalone 1-page concept note (topic-only, no template)
 ├── references/      Curated reference material (web sources + index)
 ├── sources/         Source recordings and transcripts (local only, not tracked)
@@ -20,6 +21,15 @@ For the full rationale, vision, and supporting evidence, see the [concept note](
 
 - `README.qmd` - the proposal, filled in from the concept note. This is the version to submit.
 - `README.md` - the rendered GFM output, so the proposal displays on GitHub when browsing the `proposal/` folder.
+
+### `slides/`
+
+- `index.qmd` - the five-minute pitch deck for the topic selection session: a Quarto reveal.js presentation that pitches the proposal through Alex, a composite practitioner, across eight slides. The charts are computed at render time from a local clone of [openwashdata/washopenresearch](https://github.com/openwashdata/washopenresearch).
+- `aguasan-2027-topic-pitch-openwashdata-lschoebitz.pdf` - the PDF export of the deck, linked for download from the final slide.
+- `qa.md` - prepared answers for the clarification window after the pitch.
+- `custom.scss` - the deck theme on the openwashdata palette; `_extensions/` vendors the roughnotation and fontawesome extensions the deck uses.
+
+The rendered deck (`index.html`) is not tracked; render it with `quarto render index.qmd` from inside `slides/`.
 
 ### `concept-note/`
 

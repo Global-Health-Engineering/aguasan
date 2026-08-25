@@ -40,9 +40,34 @@ Status: working draft for the rough five-day plan due to Roger and Sandra by Fri
 - The list needs extension. Candidates so far: City of Cape Town open data and Finland open-by-default (both named in the pitch); Wasser für Wasser M&E data system; Canton Zurich statistical office; AREN; GFRN.
 - Case-study selection criteria: to draft.
 
+## Retreat elements (daily rhythm)
+
+Borrowed from the residential AI-retreat format (training plus wellness, documented in the vault at wiki/reference/ai-retreat-bayern-2026): moments for conversation and connection and time in nature are scheduled, not left to chance.
+
+- Optional morning run before breakfast (self-organized, a posted route).
+- A daily walk: at least one conversation block per day happens walking, for example the case-study debrief or a use-case discussion as a walk-and-talk.
+- Being in nature: breaks go outside by default when weather allows.
+- Evenings stay deliberately unprogrammed for connection: shared dinner, a fire or lounge space available, at most one light optional element (for example an open demo corner), never mandatory content.
+- The 16:30 close exists to protect the evening.
+
+## Venue criteria (scouting starts now)
+
+- Residential seminar venue in nature, in the AGUASAN tradition (Gersau, Spiez, and Meielisalp were all lakeside residential venues; 2024 was Meielisalp above Lake Thun).
+- Everyone sleeps on site; one plenary room plus breakout spaces.
+- Reliable internet, the argument for Switzerland already made in the pitch (the shared cloud environment depends on it).
+- Walking and running routes from the door; outdoor break spaces.
+
+### Evening-programme precedent (research note, 2026-08-25)
+
+- The published agenda of the 36th workshop (Jordan 2022) contains no formal evening slots: every day ends with a closing followed by an organising-group debrief, and evenings were informal networking. The field-visit day returned to the hotel between 16:30 and 18:00.
+- A mid-week excursion or field visit is a standing feature of AGUASAN weeks.
+- The 2024 (Meielisalp) and 2025 (Kampala) reports and older Swiss weekly programmes sit behind the aguasan.ch members area; requesting past weekly programmes including evening schedules is part of the clarification email to the organizers.
+
 ## The week
 
 Ground rules for every day: breaks on the hour, no module ever longer than one hour, close at 16:30.
+
+Teaching method: every session is a mix of introductory slides, participatory live coding, peer-to-peer instruction, and spaced practice. The programme contains no talks. Taught sessions alternate with independent work sessions in which participants work on their own projects.
 
 ### Monday - arrival and foundations
 
@@ -63,11 +88,13 @@ To be dictated.
 
 ### Wednesday
 
-To be dictated.
+- Morning: excursion (form to decide). The excursion window is used by the teaching side to run through all the work that has happened and identify the progress in each project.
+- Rest of the day: to be dictated.
 
 ### Thursday
 
-To be dictated.
+- Morning: selected participants share their work as case studies created in the workshop, invited on the basis of the Wednesday progress review.
+- Rest of the day: to be dictated.
 
 ### Friday
 

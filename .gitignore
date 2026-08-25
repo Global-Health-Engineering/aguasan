@@ -13,3 +13,5 @@ sources/
 
 # file formats
 *.docx
+
+.DS_Store

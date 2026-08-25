@@ -25,6 +25,7 @@ Status: working draft for the rough five-day plan due to Roger and Sandra by Fri
 | Mid-June 2027 | Participant selection concludes, before school holidays and leaving enough time for invitations and visas. Precourse window opens |
 | By ~30 Aug 2027 (one week before start) | Precourse work completed by every participant: accounts created, setup worked through, a clean browser with the relevant bookmarks, precourse assignments read (e.g. CVEN module 2, the git-for-scientists precourse work) |
 | Week of 6 to 10 Sep 2027 | Workshop week |
+| Within two weeks after (by ~24 Sep 2027) | ds4owd-003 starts: the immediate follow-up course |
 
 ## Participant selection
 
@@ -99,3 +100,10 @@ To be dictated.
 ### Friday
 
 To be dictated.
+
+## Post-workshop follow-up (immediate)
+
+- The follow-up is immediate: ds4owd-003 starts within two weeks of the workshop week.
+- Workshop participants enter the course with their dataset already published and practice their newly developed R skills directly on their own data.
+- Exercises are individualized, produced from each participant's data package rather than generic teaching data.
+- Background threads in the vault (wiki/projects/personal-strategy-and-goals): the course redesign around participants' own data (dataset as entrance requirement, flipped classroom with recorded modules plus practice sessions, AI-designed individual learning journeys, cohort capped around 50), and the course-journal loop in which a published dataset is the entrance requirement, so the workshop feeds the course and the course feeds the planned WASH data journal.

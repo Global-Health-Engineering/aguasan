@@ -416,7 +416,7 @@ Thank you, Roger.
 
 Everyone in this room is managing the same issues: budgets cut, programmes closing, good people leaving the sector.
 
-So let me pitch our topic through one of those people. I call her Alex and she's a composite of the practitioners in our two course cohorts. Not one real person but her situation is everywhere.
+So let me pitch our topic through one of those people. I call her Alex and she's a composite of the practitioners in our two course cohorts.
 
 Fifteen years in WASH programmes. Last year the funding collapsed and years of collected data sit on her desktop: surveys, monitoring rounds, a thesis.
 
@@ -447,9 +447,9 @@ Budget 0:45, cumulative 1:20.
 
 Question a: why now? Let's start with where Alex's data could even go. We screened about `r fmt(n_screened)` articles across four WASH journals.
 
-An open repository, separate from the journal article, would be considered best practice. PLOS Water has an enforced data policy, resulting in 1 of 2 papers deposited. Our proposal is exactly that: ask and support.
+Best practice is an open repository, separate from the article. PLOS Water has an enforced data policy, resulting in 1 of 2 papers deposited. Our proposal is exactly that: ask and support.
 
-In the three journals without an enforced data policy, `r fmt(n_noenf_open)` of `r fmt(n_noenf)` articles point to data in an open repository. CLICK. That is one in `r one_in_noenf`. SLOW DOWN on this number, it carries the circle, let it land. BREATH POINT.
+In the three journals without an enforced data policy: CLICK. One in `r one_in_noenf` articles points to an open repository. SLOW DOWN on this number, it carries the circle, let it land. BREATH POINT.
 
 And journals are only what is visible. Most data, like Alex's, never reaches a paper at all. It's no unwillingness: no credit, no time, no reward.
 
@@ -477,13 +477,11 @@ Only CSV is machine readable and non proprietary. [A CSV without documentation i
 ::: {.notes}
 Budget 0:30, cumulative 1:50.
 
-When articles do attach something as data, this is what it is: mostly Word documents and PDFs, tables that your eyes can read and no computer can.
+When articles do attach "data", it is mostly Word and PDF: tables your eyes can read and no computer can. The one format that qualifies, machine readable and non proprietary, is CSV: 2 percent.
 
-The one format here that qualifies as good sharing practice, machine readable and non proprietary, is CSV, the small purple accent bar.
+CLICK for the underline.
 
-Press once for the underline.
-
-However, words and commas without documentation are still closed data; a CSV nobody can interpret because we don't know what's in the columns helps nobody. Documented, described, reusable is the actual bar, and that is exactly what the retreat teaches.
+And a CSV without documentation is still closed data. Documented, described, reusable: that is what the retreat teaches.
 
 OPTIONAL BEAT, if pace allows, otherwise hold for the Q&A window:
 
@@ -505,7 +503,7 @@ Budget 0:30, cumulative 2:20.
 
 Still question a: why AGUASAN, why 2027? The timing will not repeat. Five ETH Board Open Research Data projects with about half a million francs in funding. We have built the machinery: a community, workflows, tools, a free academy, and 51 published datasets. 
 
-That funding window closes in 2026. AGUASAN buys us the room and the reach. With the Swiss Water Partnership, it is also the route into the wider community; a mandate here is demonstrated demand in every next funding application.
+That funding window closes in 2026. AGUASAN buys us the room and the reach.
 :::
 
 ## Alex signs up: the work starts four weeks early {#prework}
@@ -542,7 +540,7 @@ Budget 0:35, cumulative 3:20.
 
 Then Friday. What flies home with Alex? First, a data package: documented, openly licensed, citable, in final state by Friday. Her data stops being a folder on a desktop. BREATH POINT.
 
-Second, the heart of it: skills that outlast any WASH job. CLICK. Git and  GitHub, Quarto, which is an alternative for MS Word, and safe, confident work with AI agents. When funding shrinks, these skills keep people employable, inside the sector or beyond it.
+Second, the heart of it: skills that outlast any WASH job. CLICK. Git and GitHub, Quarto, which is an alternative for MS Word, and safe, confident work with AI agents. When funding shrinks, these skills keep people employable, inside the sector or beyond it.
 :::
 
 ## We carry it: before, during, after {#custodian}
@@ -565,8 +563,6 @@ Question c: who carries it? We do. Elizabeth Tilley and Lars Schöbitz, Global H
 Our teaching is professional: Adriana Clavijo is a full time Scientific Assistant in our open science team. We are both certified instructors, and teach with evidence-based methods built for novices
 
 My permanent ETH position carries the community beyond any single grant and we will offer a concrete follow-up for all participants. CLICK. A free third data science course teaching foundational R skills.
-
-The other proposals are allies. We suggest a polycrisis keynote which names the storm Alex is in, the RWSN content folds into this week, and with the digital-tools proposal we share one data management chain: they propose a collection tool and we publish.
 :::
 
 ## Thanks [{{< fa sun >}}]{.accent} {#thanks}
@@ -590,9 +586,9 @@ Resources
 :::
 
 - **The openwashdata community:** [openwashdata.org](https://openwashdata.org)
-- **The FAIRqual project:**: [fairqual.org](https://fairqual.org)
+- **The FAIRqual project:** [fairqual.org](https://fairqual.org)
 - **Two published dataset examples:** [fecalcanuga](https://openwashdata.github.io/fecalcanuga/) & [solidwastekampala](https://openwashdata.github.io/solidwastekampala/) and see [catalogue for all](https://openwashdata.org/pages/gallery/data/)
-- **Our newsletter (250 subscribers):** [buttondown.com/openwashdata/archive](https://buttondown.com/openwashdata/archive)
+- **Our newsletter (250 subscribers):** [buttondown.email/openwashdata](https://buttondown.email/openwashdata)
 
 :::
 :::

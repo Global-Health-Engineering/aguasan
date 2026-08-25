@@ -66,7 +66,7 @@ Borrowed from the residential AI-retreat format (training plus wellness, documen
 
 ## The week
 
-Ground rules for every day: breaks on the hour, no module ever longer than one hour, close at 16:30.
+Ground rules for every day: breaks on the hour (5 and 10 minutes), 10-minute physical activity blocks between sessions in addition to the breaks, no module ever longer than one hour, close at 16:30.
 
 Teaching method: every session is a mix of introductory slides, participatory live coding, peer-to-peer instruction, and spaced practice. The programme contains no talks. Taught sessions alternate with independent work sessions in which participants work on their own projects.
 
@@ -85,12 +85,26 @@ Precourse dependency: the Git and GitHub modules assume the precourse work is do
 
 ### Tuesday
 
-To be dictated.
+| Time | Block |
+|---|---|
+| 09:00 to 11:00 | Git and GitHub, part 2 |
+| 11:00 to 12:00 | Data project work |
+| 13:00 to 15:00 | FAIR data principles, including work sessions on the participants' own data to address them |
+| 15:00 to 16:30 | Case study, discussions |
+| 16:30 | Close |
 
 ### Wednesday
 
 - Morning: excursion (form to decide). The excursion window is used by the teaching side to run through all the work that has happened and identify the progress in each project.
-- Rest of the day: to be dictated.
+
+| Time | Block |
+|---|---|
+| 13:00 to 15:00 | Agentic AI |
+| 15:00 to 16:30 | Personal project work with agentic AI |
+| 16:30 | Close |
+| Evening | Walk, run, fire. Topic: AI disruption of the workplace |
+
+- The agentic AI blocks are the fastest-moving part of the programme and might look different from today's tools; that is built in by design. Borrow concepts from the AI Playground session series (documented in the vault at wiki/projects/ai-playground).
 
 ### Thursday
 

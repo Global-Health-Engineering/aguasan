@@ -575,7 +575,7 @@ References
 :::
 
 - **Data and code:** [github.com/openwashdata/washopenresearch](https://github.com/openwashdata/washopenresearch)
-- **These slides:** published before the event, downloadable as PDF
+- **These slides:** [download as PDF](https://github.com/Global-Health-Engineering/aguasan/raw/main/slides/aguasan-2027-topic-pitch-openwashdata-lschoebitz.pdf)
 - **Built with Quarto and reveal.js:** [quarto.org/docs/presentations/revealjs](https://quarto.org/docs/presentations/revealjs/)
 
 :::

@@ -1,0 +1,164 @@
+/*-- scss:defaults --*/
+
+// Person-story pitch theme on the openwashdata palette: brand ink on a
+// very light tint of the navbar purple, the navbar purple as the accent.
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap');
+
+$ink: #1e1e1e;
+$paper: #f5eef5;
+$accent: #5b195b;
+$muted: #6b665e;
+
+$body-bg: $paper;
+$body-color: $ink;
+$link-color: $accent;
+$presentation-font-size-root: 38px;
+$presentation-heading-color: $ink;
+$presentation-heading-font-weight: 700;
+$presentation-h2-font-size: 1.25em;
+$font-family-sans-serif: "Atkinson Hyperlegible", "Helvetica Neue", Helvetica,
+  Arial, sans-serif;
+
+/*-- scss:rules --*/
+
+.reveal .slides {
+  text-align: left;
+}
+
+// Serif display face for the story voice; body stays sans.
+.reveal h2,
+.reveal .display p {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.reveal h2 {
+  margin-bottom: 0.55em;
+}
+
+.reveal ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.reveal ul li {
+  margin-bottom: 0.5em;
+  padding-left: 0.9em;
+  position: relative;
+}
+
+.reveal ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 0.45em;
+  height: 0.12em;
+  background: $accent;
+}
+
+// Large display statements for the story beats.
+.reveal .display p {
+  font-size: 1.75em;
+  font-weight: 700;
+  line-height: 1.22;
+  margin-bottom: 0.4em;
+}
+
+.reveal .accent {
+  color: $accent;
+}
+
+// The topic line on the title slide: second-loudest element after the name.
+.reveal .topic p {
+  font-size: 1.18em;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 0.5em;
+}
+
+// Section marker: keeps the agenda's a / b / c visibly on screen.
+.reveal .kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.52em;
+  font-weight: 600;
+  color: $muted;
+  margin-bottom: 1.1em;
+}
+
+.reveal .muted {
+  color: $muted;
+}
+
+.reveal .small {
+  font-size: 0.6em;
+}
+
+.reveal .foot {
+  margin-top: 1.8em;
+  font-size: 0.5em;
+  color: $muted;
+}
+
+.reveal .closer p {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 0.7em;
+}
+
+// The final distillation slide: three compact answer rows, full width now
+// that the slide carries no chart.
+.reveal .abc p {
+  font-size: 0.85em;
+  line-height: 1.4;
+  margin-bottom: 0.65em;
+}
+
+.reveal .abc strong {
+  color: $accent;
+}
+
+// Keep the slide number quiet.
+.reveal .slide-number {
+  color: $muted;
+  background: transparent;
+  font-size: 16px;
+}
+
+// Agenda-question prominence: one underline colour per question.
+// a purple, b blue, c orange; same hues on the distillation slide's rows.
+$q-a: #5b195b;
+$q-b: #272bd1;
+$q-c: #c14a09;
+
+.reveal .kicker-a p,
+.reveal .kicker-b p,
+.reveal .kicker-c p {
+  display: inline-block;
+  color: $ink;
+  font-weight: 700;
+  font-size: 1.12em;
+  padding-bottom: 0.3em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.34em;
+}
+
+.reveal .kicker-a p { border-bottom-color: $q-a; }
+.reveal .kicker-b p { border-bottom-color: $q-b; }
+.reveal .kicker-c p { border-bottom-color: $q-c; }
+
+.reveal .q-a,
+.reveal .q-b,
+.reveal .q-c {
+  font-weight: 700;
+  color: $ink;
+  padding-bottom: 0.05em;
+  border-bottom: 0.14em solid;
+}
+
+.reveal .q-a { border-bottom-color: $q-a; }
+.reveal .q-b { border-bottom-color: $q-b; }
+.reveal .q-c { border-bottom-color: $q-c; }

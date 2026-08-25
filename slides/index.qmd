@@ -558,11 +558,11 @@ Second, the heart of it: skills that outlast any WASH job. CLICK. Git and GitHub
 ::: {.notes}
 Budget 0:35, cumulative 3:55.
 
-Question c: who carries it? We do. Elizabeth Tilley and Lars Schöbitz, Global Health Engineering, ETH Zurich, as custodians, committed to every contribution in the template, from the October preparatory event to the Steering Committee.
+The last question: who carries it? That's us, Liz and I, from Global Health Engineering, as custodians, committed to every contribution in the template, from the October preparatory event to the Steering Committee.
 
-Our teaching is professional: Adriana Clavijo is a full time Scientific Assistant in our open science team. We are both certified instructors, and teach with evidence-based methods built for novices
+Our teaching is professional: Adriana Clavijo is a full time Scientific Assistant in our open science team. We are both certified instructors, and teach with evidence-based methods built for novices.
 
-My permanent ETH position carries the community beyond any single grant and we will offer a concrete follow-up for all participants. CLICK. A free third data science course teaching foundational R skills.
+My permanent ETH position carries the community beyond any single grant and we will offer a concrete follow-up for all participants. CLICK. A free third data science course teaching foundational R skills, where participants mix with others from across the sector.
 :::
 
 ## Thanks [{{< fa sun >}}]{.accent} {#thanks}

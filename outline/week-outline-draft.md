@@ -129,6 +129,18 @@ Precourse dependency: the Git and GitHub modules assume the precourse work is do
 - Friday closes at 15:00 rather than 16:30, travel-friendly, mirroring the Monday arrival buffer.
 - The afternoon split (13:00/14:00) is a placement, to confirm; dictated fixed points are the 2.5-hour morning workshop, the strong closing session, and the 15:00 close.
 
+## Take-home outputs
+
+Every participant leaves with:
+
+- Their dataset published as a documented data package (draft state by Friday, DOI archiving supported after the week).
+- Durable skills: Git, GitHub, Quarto, FAIR data handling, safe work with agentic AI.
+- A personal website, published on Friday.
+- A draft plan for their own organisation: a data management strategy outline or data management plan, developed during the week's work sessions so the practice transfers home (which work-session slots carry this: to place).
+- The enrollment path into ds4owd-003.
+
+Scope decision (2026-08-25): keynotes and a closing capacity-development brief are out of the outline; the per-participant organisational plan takes their place as the priority output.
+
 ## Post-workshop follow-up (immediate)
 
 - The follow-up is immediate: ds4owd-003 starts within two weeks of the workshop week.

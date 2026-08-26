@@ -11,6 +11,9 @@
 # sources (raw recordings and transcripts - contain candid internal notes)
 sources/
 
+# audio never belongs in this repo, anywhere (moved to ~/archive/aguasan-audio/)
+*.m4a
+
 # file formats
 *.docx
 

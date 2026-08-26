@@ -231,4 +231,29 @@ p_grow <- ggplot(d_grow, aes(cohort, registrations, fill = cohort)) +
   theme_owd() + theme(panel.grid.major.x = element_blank())
 save_fig(p_grow, "07-growth.png", w = 6, h = 4.4)
 
-cat("Wrote 7 figures to demand/figures/\n")
+# ---- 8. Global reach (ds4owd-002 country of residence, ranked bar, top 15) ----
+# 002-only: 001 did not capture country cleanly.
+iso_name <- c(NGA="Nigeria", CHE="Switzerland", UGA="Uganda", GHA="Ghana",
+              ETH="Ethiopia", MWI="Malawi", ZAF="South Africa", USA="United States",
+              KEN="Kenya", DEU="Germany", FRA="France", IND="India", CAN="Canada",
+              GBR="United Kingdom", NLD="Netherlands", BOL="Bolivia")
+n_countries <- s2 |> mutate(c = trimws(country_residence)) |>
+  filter(c != "", !is.na(c)) |> distinct(c) |> nrow()
+d_ctry <- s2 |>
+  mutate(c = trimws(country_residence)) |>
+  filter(c != "", !is.na(c)) |>
+  count(c, sort = TRUE) |>
+  slice_head(n = 15) |>
+  mutate(name = coalesce(iso_name[c], c), name = fct_reorder(name, n))
+p_ctry <- ggplot(d_ctry, aes(n, name)) +
+  geom_col(fill = owd_purple, width = 0.7) +
+  geom_text(aes(label = n), hjust = -0.3, size = 4, colour = ink) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(title = "A global, Global-South-led audience",
+       subtitle = paste0(n2, " ds4owd-002 registrants from ", n_countries,
+                         " countries (~64% Global South); top 15 shown"),
+       x = NULL, y = NULL) +
+  theme_owd(base_size = 14)
+save_fig(p_ctry, "08-geography.png", h = 5.2)
+
+cat("Wrote 8 figures to demand/figures/\n")

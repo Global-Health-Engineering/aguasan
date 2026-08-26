@@ -66,7 +66,7 @@ Borrowed from the residential AI-retreat format (training plus wellness, documen
 
 ## The week
 
-Ground rules for every day: breaks on the hour (5 and 10 minutes), 10-minute physical activity blocks between sessions in addition to the breaks, no module ever longer than one hour, close at 16:30.
+Ground rules for every day: the day starts at 08:30 with the official session start at 09:00 (Monday's arrival buffer and opening are the exception); breaks on the hour (5 and 10 minutes); 10-minute physical activity blocks between sessions in addition to the breaks; no module ever longer than one hour; close at 16:30 (Friday closes at 15:00).
 
 Teaching method: every session is a mix of introductory slides, participatory live coding, peer-to-peer instruction, and spaced practice. The programme contains no talks. Taught sessions alternate with independent work sessions in which participants work on their own projects.
 

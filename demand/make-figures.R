@@ -256,4 +256,29 @@ p_ctry <- ggplot(d_ctry, aes(n, name)) +
   theme_owd(base_size = 14)
 save_fig(p_ctry, "08-geography.png", h = 5.2)
 
-cat("Wrote 8 figures to demand/figures/\n")
+# ---- 9. Career stage, proxied by age band (ds4owd-002) ----
+# NOTE: this is a PROXY for career stage. The survey has no seniority / role /
+# leadership field yet (see ds4owd-dev/pre-course-survey#5); age and employment
+# are the closest available signals, so this figure is labelled as indicative,
+# not a seniority measure.
+age_lbl <- c(`18_24` = "18-24", `25_34` = "25-34", `35_44` = "35-44",
+             `45_54` = "45-54", `55_64` = "55-64", `65_or_older` = "65+",
+             prefer_not_to_say_age = "Prefer not to say")
+age_order <- c("18-24", "25-34", "35-44", "45-54", "55-64", "65+", "Prefer not to say")
+d_age <- s2 |>
+  mutate(a = age_lbl[trimws(age_group)]) |>
+  filter(!is.na(a)) |>
+  count(a) |>
+  mutate(pct = round(100 * n / sum(n)),
+         a = factor(a, levels = rev(age_order)))
+p_age <- ggplot(d_age, aes(pct, a)) +
+  geom_col(fill = owd_purple, width = 0.7) +
+  geom_text(aes(label = paste0(pct, "%")), hjust = -0.25, size = 4, colour = ink) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(title = "An early-to-mid-career audience",
+       subtitle = paste0("Age band as a proxy for career stage, ds4owd-002 (n=", n2, "); ~75% under 45"),
+       x = "% of cohort", y = NULL) +
+  theme_owd(base_size = 14)
+save_fig(p_age, "09-career-stage.png", w = 8.5, h = 4.8)
+
+cat("Wrote 9 figures to demand/figures/\n")

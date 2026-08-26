@@ -33,7 +33,21 @@ Status: working draft for the rough five-day plan due to Roger and Sandra by Fri
 - The dataset is the entry ticket and is screened at submission.
 - Cap: 30 participants.
 - Selection concludes mid-June 2027.
-- Selection criteria: to draft.
+- Selection works in two passes. First a quality pass on the application: the dataset is real and can be brought, the survey answers show the applicant will do the pre-work, and the one-minute video shows they can explain why the data matters. Then a diversity pass across everyone who clears the quality bar, to compose a balanced cohort.
+- Diversity dimensions balanced in the second pass:
+  - Gender: a balanced cohort of women and men.
+  - Geography: a strong majority from resource-constrained countries, not a Northern-led group.
+  - Seniority: a mix from early-career practitioners to senior staff, so peers learn across levels.
+  - Sector: water, sanitation, hygiene, and solid waste management represented.
+  - Employment: academia, public sector, and private sector represented.
+- The pre-course survey used for ds4owd, the same instrument behind the demand evidence, is reused here to screen and baseline applicants, so selection rests on data rather than impressions.
+
+## Travel grants
+
+- Travel grants make the diversity goals real. Without them, the geography and gender balance above cannot hold, because the people we most want in the room are the least able to self-fund.
+- Grants for women from resource-constrained countries, covering travel and accommodation for the workshop week.
+- Childcare support, so a parent can bring a child and an additional carer and still take part.
+- Open questions to settle: how many grants the budget allows, who funds them (a line in the workshop budget, a separate sponsor, or both), and how applicants indicate a need without it counting against selection.
 
 ## Case studies
 

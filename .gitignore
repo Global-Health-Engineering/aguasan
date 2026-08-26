@@ -17,4 +17,8 @@ sources/
 # file formats
 *.docx
 
+# review exports (docx + CSVs), regenerated from source by the render/extract
+# scripts; the scripts are tracked, their output is not
+exports/
+
 .DS_Store

@@ -43,7 +43,7 @@ What better, open data enables for WASH itself, the strategic question raised in
 
 ## How the week takes up the other proposals
 
-- The topic selection session asked for the withdrawn digital tools proposal to be integrated and put the two strategic proposals forward as the alternative option. Each of the three has a place in this week, and each is an invitation to its proposers to take part.
+The topic selection session asked for the withdrawn digital tools proposal to be integrated and put the two strategic proposals forward as the alternative option. Each of the three has a place in this week, and each is an invitation to its proposers to take part.
 
 ### Data collection tools
 
@@ -81,7 +81,7 @@ From the polycrisis proposal by Christoph Lüthi, John Brogan, and Dorothee Spuh
 
 ## Backdated timeline
 
-- The timeline and the five daily schedules are also shared as a compact overview in the accompanying spreadsheet (week-schedule.xlsx), generated from the tables in this document.
+The timeline and the five daily schedules are also shared as a compact overview in the accompanying spreadsheet (week-schedule.xlsx), generated from the tables in this document.
 
 | When | What |
 |----|----|
@@ -137,7 +137,7 @@ From the polycrisis proposal by Christoph Lüthi, John Brogan, and Dorothee Spuh
 
 ## Case studies
 
-- This list is still being built. The candidates below are grouped by the kind of case each one shows; the final selection and the case-study selection criteria will be confirmed with the Steering Group.
+This list is still being built. The candidates below are grouped by the kind of case each one shows; the final selection and the case-study selection criteria will be confirmed with the Steering Group.
 
 | Category | Case | What it shows |
 |----|----|----|
@@ -161,7 +161,8 @@ From the polycrisis proposal by Christoph Lüthi, John Brogan, and Dorothee Spuh
 
 ## Retreat elements (daily rhythm)
 
-- Moments for conversation and connection and time in nature are scheduled as an integral part of the week.
+Moments for conversation and connection and time in nature are scheduled as an integral part of the week.
+
 - Optional morning run before breakfast (self-organized, a posted route).
 - A daily walk: at least one conversation block per day happens walking, for example the case-study debrief or a use-case discussion as a walk-and-talk.
 - Being in nature: breaks go outside by default when weather allows.
@@ -170,8 +171,8 @@ From the polycrisis proposal by Christoph Lüthi, John Brogan, and Dorothee Spuh
 
 ## The week
 
-- Compact overview
-  - The five daily schedules below and the backdated timeline are also shared as one sheet in the accompanying spreadsheet (week-schedule.xlsx), generated from the tables in this document.
+The five daily schedules below and the backdated timeline are also shared as one sheet in the accompanying spreadsheet (week-schedule.xlsx), generated from the tables in this document.
+
 - Ground rules for every day
   - The day starts at 08:30 with the official session start at 09:00 (Monday's arrival buffer and opening are the exception); breaks on the hour (5 and 15 minutes, including small physical activity exercises); no module ever longer than one hour; close at 16:30 (Friday closes at 15:00).
 - Arrival block

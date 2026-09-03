@@ -45,7 +45,7 @@ slot_min <- vapply(slots, to_min, numeric(1))
 parse_when <- function(w) {
   w <- str_squish(w)
   t <- str_extract_all(w, "\\d{1,2}:\\d{2}")[[1]]
-  if (str_detect(w, "^\\d{1,2}:\\d{2} to \\d{1,2}:\\d{2}$"))
+  if (str_detect(w, "\\d{1,2}:\\d{2} to \\d{1,2}:\\d{2}"))   # a range anywhere in the text
     return(list(kind = "block", start = to_min(t[1]), end = to_min(t[2])))
   if (str_detect(w, "^Until \\d{1,2}:\\d{2}$"))
     return(list(kind = "block", start = to_min("08:30"), end = to_min(t[1])))
@@ -63,7 +63,7 @@ activity_type <- function(what) {
     str_detect(what, "Excursion|[Ww]alk|fire")                                ~ "Retreat",
     str_detect(what, "^Work session|project work|^Data project")              ~ "Project work",
     str_detect(what, "[Cc]ase stud|share their")                              ~ "Case studies and presentations",
-    str_detect(what, "module|Foundations|workshop|FAIR|Agentic AI|Quarto|AI session") ~ "Taught module",
+    str_detect(what, "module|Foundations|workshop|FAIR|Agentic AI|Quarto|AI session|Data management strategy") ~ "Taught module",
     TRUE                                                                      ~ "Other"
   )
 }
@@ -142,7 +142,7 @@ ym <- function(y, m) as.Date(sprintf("%d-%02d-01", as.integer(y), as.integer(m))
 # Returns a list of c(start, end) month pairs for one "When" string.
 # Rule: a season with a year spans its months (winter rolls into the next year);
 # otherwise every month mention becomes a point, months without a year borrow
-# the nearest year in the string; " and " joins separate bars, anything else is
+# the nearest year in the string; " and " or " or " join separate bars, anything else is
 # one bar from the earliest to the latest month.
 parse_months <- function(w) {
   wl <- tolower(w)
@@ -157,7 +157,7 @@ parse_months <- function(w) {
   if (all(is.na(yr))) return(list())
   for (i in which(is.na(yr))) { cand <- which(!is.na(yr)); yr[i] <- yr[cand[which.min(abs(cand - i))]] }
   pts <- sort(unique(ym(yr, mon)))
-  if (str_detect(wl, "\\band\\b")) lapply(pts, function(p) c(p, p)) else list(c(min(pts), max(pts)))
+  if (str_detect(wl, "\\b(and|or)\\b")) lapply(pts, function(p) c(p, p)) else list(c(min(pts), max(pts)))
 }
 
 phase_of <- function(what) {
@@ -167,7 +167,7 @@ phase_of <- function(what) {
     str_detect(what, "SNSF|[Bb]udget|grant")                                ~ "Funding",
     str_detect(what, "Precourse")                                           ~ "Precourse",
     str_detect(what, "Workshop week")                                       ~ "Event",
-    str_detect(what, "ds4owd|[Ee]valuation|report|monitoring|article")      ~ "Follow-up",
+    str_detect(what, "ds4owd|Data Science for openwashdata|[Ee]valuation|report|monitoring|article|conference") ~ "Follow-up",
     TRUE                                                                    ~ "Organisers"
   )
 }

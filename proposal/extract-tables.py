@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Extract the timing tables and overview timeline from the week outline to CSV.
 
-Reads proposal/week-outline-draft.qmd, finds each markdown table that sits under a
+Reads proposal/week-outline-draft.qmd, finds each table (pipe or Pandoc grid) that sits under a
 target heading, and writes ONE combined CSV to exports/ for Google Sheets
 review. Each row is tagged with the section it came from.
 Run from the repo root: python3 proposal/extract-tables.py
@@ -37,6 +37,7 @@ def clean_cell(s: str) -> str:
 
 
 def parse_table(lines, start):
+    """Pipe table: | a | b | rows with a |---| separator row."""
     rows, i = [], start
     while i < len(lines) and lines[i].lstrip().startswith("|"):
         line = lines[i].strip()
@@ -46,6 +47,33 @@ def parse_table(lines, start):
         cells = [clean_cell(c) for c in line.strip("|").split("|")]
         rows.append(cells)
         i += 1
+    return rows, i
+
+
+def parse_grid(lines, start):
+    """Pandoc grid table: +---+ row separators, +===+ under the header, | cell
+    lines in between. Column bounds come from the + positions of the first
+    separator; a cell spanning several lines is joined with single spaces."""
+    bounds = [k for k, ch in enumerate(lines[start]) if ch == "+"]
+    ncol = len(bounds) - 1
+    rows, cur, i = [], None, start
+
+    def flush():
+        if cur is not None and any(cur):
+            rows.append([clean_cell(" ".join(c)) for c in cur])
+
+    while i < len(lines) and (lines[i].startswith("+") or lines[i].startswith("|")):
+        line = lines[i]
+        if line.startswith("+"):
+            flush()
+            cur = [[] for _ in range(ncol)]
+        else:
+            for k in range(ncol):
+                cell = line[bounds[k] + 1:bounds[k + 1]].strip()
+                if cell:
+                    cur[k].append(cell)
+        i += 1
+    flush()
     return rows, i
 
 
@@ -59,13 +87,13 @@ def main():
             heading = m.group(1).strip()
             section = TARGET_MAP[heading]
             j = i + 1
-            while j < len(text) and not text[j].lstrip().startswith("|"):
+            while j < len(text) and not (text[j].startswith("|") or text[j].startswith("+")):
                 if re.match(r"^#{2,3}\s+", text[j]):
                     j = None
                     break
                 j += 1
             if j is not None and j < len(text):
-                rows, _ = parse_table(text, j)
+                rows, _ = (parse_grid if text[j].startswith("+") else parse_table)(text, j)
                 for r in rows[1:]:  # skip the header row of each table
                     when = r[0] if len(r) > 0 else ""
                     what = r[1] if len(r) > 1 else ""

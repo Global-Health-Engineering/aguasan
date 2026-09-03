@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """Extract the timing tables and overview timeline from the week outline to CSV.
 
-Reads outline/week-outline-draft.md, finds each markdown table that sits under a
+Reads proposal/week-outline-draft.md, finds each markdown table that sits under a
 target heading, and writes ONE combined CSV to exports/ for Google Sheets
 review. Each row is tagged with the section it came from.
-Run from the repo root: python3 outline/extract-tables.py
+Run from the repo root: python3 proposal/extract-tables.py
 """
 import csv
 import re
 import sys
 from pathlib import Path
 
-SRC = Path("outline/week-outline-draft.md")
+SRC = Path("proposal/week-outline-draft.md")
 OUT = Path("exports")
 OUT.mkdir(exist_ok=True)
 COMBINED = OUT / "aguasan-week-schedule.csv"

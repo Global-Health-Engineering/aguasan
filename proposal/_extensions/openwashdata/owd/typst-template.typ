@@ -75,6 +75,7 @@
   logo-width: 40mm,
   footer-text: none,
   page-fill: white,
+  cover: true,
   doc,
 ) = {
   set document(title: title, keywords: keywords)
@@ -123,8 +124,13 @@
     }
   }
 
+  // Tables: bold header cells; a soft grey line under every body row. The
+  // rule under the header row comes from Quarto and keeps the text colour.
+  show table.cell.where(y: 0): set text(weight: "bold")
+  set table(stroke: (x, y) => if y == 0 { none } else { (bottom: 0.4pt + luma(200)) })
+
   let has-title-block = title != none or (authors != none and authors != ()) or date != none or abstract != none
-  if has-title-block {
+  let front-matter = if has-title-block {
     let logo-path = if logo == none {
       none
     } else if logo.starts-with("/") or logo.starts-with("http") {
@@ -163,41 +169,52 @@
         text(fill: luma(70))[#date]
       }
     ]
-    block(width: 100%, below: 2em)[
-      #if logo-path != none {
-        grid(
-          columns: (1fr, logo-width),
-          column-gutter: 1.5em,
-          align: (left + top, right + top),
-          title-column,
-          image(logo-path, width: logo-width),
-        )
-      } else {
-        title-column
-      }
-      #v(0.8em)
-      #line(length: 100%, stroke: 0.75pt + primary)
-    ]
-    if abstract != none {
-      block(inset: (x: 0em, y: 0.5em), below: 1.5em)[
-        #text(weight: "semibold")[#abstract-title] #h(1em) #abstract
+    [
+      #block(width: 100%, below: 2em)[
+        #if logo-path != none {
+          grid(
+            columns: (1fr, logo-width),
+            column-gutter: 1.5em,
+            align: (left + top, right + top),
+            title-column,
+            image(logo-path, width: logo-width),
+          )
+        } else {
+          title-column
+        }
+        #v(0.8em)
+        #line(length: 100%, stroke: 0.75pt + primary)
       ]
-    }
+      #if abstract != none {
+        block(inset: (x: 0em, y: 0.5em), below: 1.5em)[
+          #text(weight: "semibold")[#abstract-title] #h(1em) #abstract
+        ]
+      }
+    ]
+  } else {
+    none
   }
 
-  if toc {
-    let title = if toc_title == none {
-      auto
-    } else {
-      toc_title
-    }
+  let toc-block = if toc {
     block(above: 0em, below: 2em)[
-    #outline(
-      title: toc_title,
-      depth: toc_depth,
-      indent: toc_indent
-    );
+      #outline(
+        title: toc_title,
+        depth: toc_depth,
+        indent: toc_indent
+      )
     ]
+  } else {
+    none
+  }
+
+  if cover and front-matter != none {
+    // Cover page without footer: front matter and, when asked for, the
+    // table of contents. The body starts on the next page as page 1.
+    page(footer: none)[#front-matter #toc-block]
+    counter(page).update(1)
+  } else {
+    front-matter
+    toc-block
   }
 
   doc

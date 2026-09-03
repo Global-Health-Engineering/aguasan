@@ -11,13 +11,30 @@ format:
 editor: visual
 ---
 
-Status: working draft for the rough five-day plan due to Roger and Sandra by Friday 2026-09-04. Monday, the selection process, and the full backdated timeline are dictated (Lars, 2026-08-25); Tuesday to Friday follow in later sessions.
+Status: working draft for the revised practice-oriented option, due to Roger and Sandra by Friday 2026-09-04. All five days, the selection process, the funding for participant support, and the timeline before and after the week are drafted. Items marked "to confirm" are settled with the Steering Group.
+
+## Why this week for WASH
+
+What better, open data enables for WASH itself, the strategic question raised at the topic selection session:
+
+- Reuse and combination come first: finding what someone else measured in another place, combining data sources, and reanalysing data that was only ever shared in summary form.
+- The WHO/UNICEF JMP has not been able to collect data on faecal sludge treatment in the global south for fifteen years. Utilities that manage and share their data would enable regional, national, and global estimates.
+- Data is collected twice today, and evidence dies with a defunded programme: monitoring data leaves with the programme, local institutions cannot build on what was measured in their own country, and the next programme starts its baseline from zero. Open publication keeps the evidence where the work continues.
+- Very little impact monitoring exists. The impact of WASH programmes and WASH research on access to services cannot be measured without shared data as a shared ground truth. The week does not solve defunding, but it makes impact measurable.
+- Crisis baselines are missing: the 2024 and 2025 nexus workshops showed that response in refugee-hosting settings depends on pre-crisis service levels. Closed or lost baselines mean re-surveying under pressure or acting blind. Shared, findable data is preparedness.
+- Evidence synthesis is blocked: the washopenresearch screening of about 8,500 articles found roughly one in 57 pointing to an open repository outside journals with enforced policies, mostly Word or PDF attachments, and about 2 percent as machine readable CSV. Policy rests on thinner evidence than was collected.
+- Closed data makes WASH invisible to AI: practitioners ask AI tools first, and those tools draw only on what is open and machine readable. A sector whose evidence sits in closed PDFs gets answered around.
+- AGUASAN supplies the trust, the week supplies the shared infrastructure: a community across government, NGOs, research, consulting, and networks with forty years of trust and no shared working infrastructure. The week gives that network a shared GitHub organisation, published packages, and common formats (tidy CSV, data dictionaries) that make one organisation's data combinable with another's.
+- The community as it is: the 2026 members list is about two thirds research, NGO, and consulting, with a small donor and policy group. The dataset entry ticket fits today's community; the strategic case above speaks to the donor group that reads the concept note.
+- Demand is measured: the accompanying document "Who signs up for openwashdata training" shows 421 registrations across two course cohorts from 45 countries, most from the global south, most arriving as beginners, and nearly all now using AI tools for words rather than for their data.
 
 ## Working assumptions
 
 - Event week: Monday 6 to Friday 10 September 2027 (beginning of September; exact week to confirm with the organizers).
-- Up to 30 participants.
-- Support ratio during active workshop time: one support person per five participants, so six people in the room. Lars, Liz, and Adriana are three; identify three more.
+- 48 participants, working in eight groups of six.
+- One dedicated support person per group, so eight supporters in the room during active workshop time. Lars, Liz, and Adriana are three; identify five more.
+- Each group meets online before the workshop, so exchange and a group feeling start early.
+- Nobody works alone: everyone keeps their own dataset and outputs, and the group reads each other's code and outputs.
 - Venue scouting starts immediately.
 
 ## Backdated timeline
@@ -27,22 +44,29 @@ Status: working draft for the rough five-day plan due to Roger and Sandra by Fri
 | Now (Sep 2026) | Venue scouting starts. Outline due to Roger and Sandra 2026-09-04 |
 | Mid to late Sep 2026 | Topic selection decision by Skat and SDC |
 | Mid-Oct 2026 | Preparatory day back-to-back with the AGUASAN meeting |
+| Autumn 2026 | Budget clarification with Skat and SDC: which SDC vehicle carries the 2027 workshop, a participant support line, a childcare line |
 | Winter 2026/27 | Steering Group design sessions (per the AGUASAN process) |
 | \~1 to 14 Feb 2027 | Outreach and promotion campaign, a two-week push |
 | \~Mid-March 2027 | Outreach reminder 1 (four weeks after the campaign) |
+| By \~end of March 2027 | SNSF Scientific Exchanges application for participant support submitted (the scheme accepts applications 4 to 18 months before the event) |
 | \~Mid-April 2027 | Outreach reminder 2 (eight weeks after the campaign) |
 | Beginning of May 2027 (\~Mon 3 May) | Submission due date: participation applications plus grant and travel bursary requests (six weeks before selection concludes) |
 | May to mid-June 2027 | Screening: datasets, surveys, videos; selection decisions |
 | Mid-June 2027 | Participant selection concludes, before school holidays and leaving enough time for invitations and visas. Precourse window opens |
+| Mid-June to end of August 2027 | Precourse window: each group of six meets online with its supporter; dataset review for sensitive fields before anything is shared; targeted support with data collection tools where a participant's data calls for it; accounts and setup |
 | By \~30 Aug 2027 (one week before start) | Precourse work completed by every participant: accounts created, setup worked through, a clean browser with the relevant bookmarks, precourse assignments read (e.g. CVEN module 2, the git-for-scientists precourse work) |
 | Week of 6 to 10 Sep 2027 | Workshop week |
 | Within two weeks after (by \~24 Sep 2027) | ds4owd-003 starts: the immediate follow-up course |
+| By \~end of October 2027 | Evaluation survey results and the custodian workshop report delivered in the requested format; the recommendations report drafted with the Steering Group |
+| March 2028 and September 2028 | Impact monitoring at six and twelve months; the research article follows the twelve month point (both proposed) |
 
 ## Participant selection
 
 - An application consists of a dataset, a minimal survey, and a one-minute video.
-- The dataset is the entry ticket and is screened at submission.
-- Cap: 30 participants.
+- The dataset is the entry ticket and is screened at submission. Participants contribute their dataset as scientific content to the week and are invited to co-author the research article on the workshop.
+- Cap: 48 participants.
+- The survey asks which data collection tools produced the dataset, so the week knows the tools in use and where targeted support is needed (see Data collection tools below).
+- Grant need is declared in a separate field that the quality pass does not see; it counts neither for nor against selection.
 - Selection concludes mid-June 2027.
 - Selection works in two passes. First a quality pass on the application: the dataset is real and can be brought, the survey answers show the applicant will do the pre-work, and the one-minute video shows they can explain why the data matters. Then a diversity pass across everyone who clears the quality bar, to compose a balanced cohort.
 - Diversity dimensions balanced in the second pass:
@@ -58,11 +82,21 @@ Status: working draft for the rough five-day plan due to Roger and Sandra by Fri
 - Travel grants make the diversity goals real. Without them, the geography and gender balance above cannot hold, because the people we most want in the room are the least able to self-fund.
 - Grants for women from resource-constrained countries, covering travel and accommodation for the workshop week.
 - Childcare support, so a parent can bring a child and an additional carer and still take part.
-- Open questions to settle: how many grants the budget allows, who funds them (a line in the workshop budget, a separate sponsor, or both), and how applicants indicate a need without it counting against selection.
+- Funding, two lines stacked:
+  - A participant support line in the SDC workshop budget. The request goes to Skat and SDC in the autumn budget clarification: which vehicle carries the 2027 workshop, and whether participant support and childcare can be written into it.
+  - An SNSF Scientific Exchanges application by spring 2027. A member of the ETH Zurich group applies, on a rolling basis 4 to 18 months before the event. The scheme pays travel including visas, accommodation, and meals for participants from abroad, allows practitioners as invitees, and pays a childcare allowance of CHF 200 per accompanying child per night plus the child's travel. Cap CHF 25,000 (roughly 8 to 12 funded participants from abroad), events of at most five days, invitees contribute scientific content. The current guidelines expire 2026-12-31, so the terms are re-checked before applying.
+  - Childcare is a named budget line in the workshop budget. EMBO earmarks a fixed childcare sum per funded workshop; the same model applies here.
+- The grant count follows the budget answer: the SNSF application covers the first 8 to 12 participants from abroad, the SDC line covers the rest.
+
+## Data collection tools (integrating the withdrawn proposal)
+
+- Every shared dataset shows how it was collected. The application survey asks which data collection tools produced the dataset, which gives a picture of what is in use across the cohort and where gaps exist relative to the tools the digital tools proposal put forward.
+- Targeted support follows in the precourse window: participants whose data calls for it get support with the relevant collection tool, rather than presentations to everyone.
+- The difference to the workshop's own tools: data management workflows (Git, GitHub, Quarto, data packages) apply to any data; collection tools are specific to a data type, so that support is targeted.
 
 ## Case studies
 
-This list is still being built. The candidates below are grouped by the kind of case each one shows; the final selection and the case-study selection criteria will be confirmed with the Steering Group.
+- This list is still being built. The candidates below are grouped by the kind of case each one shows; the final selection and the case-study selection criteria will be confirmed with the Steering Group.
 
 | Category | Case | What it shows |
 |----|----|----|
@@ -77,14 +111,15 @@ This list is still being built. The candidates below are grouped by the kind of 
 | Under consideration (WASH / Swiss) | Wasser für Wasser M&E data system; Canton Zurich statistical office | Additional sector and Swiss open-data candidates, not yet detailed |
 | Reproducibility-network partners | AREN (African Reproducibility Network, founded 2022 by Emmanuel Boakye; runs open-science training and ambassador programmes across Africa); GFRN (Global Federation of Reproducibility Networks, whose AI-disclosure working group Lars is part of) | Reach and reproducibility-community links rather than WASH datasets: a route to African practitioners and a partner for the open-science and AI-disclosure angle, beyond the WASH sector |
 
-Possible speakers: openwashdata course alumni whose participation led to published, reusable data; a PLOS speaker on the publishing and data-paper pathway (Lauren Cadwallader, co-host of the January 2023 FAIR webinar); a WASH-and-AI speaker on making sector data AI-ready (for example Olivier Mills, Baobab Tech / WASH AI).
-
-Case-study selection criteria: to draft.
+- Possible speakers:
+  - openwashdata course alumni whose participation led to published, reusable data.
+  - A PLOS speaker on the publishing and data-paper pathway (Lauren Cadwallader, co-host of the January 2023 FAIR webinar).
+  - A WASH-and-AI speaker on making sector data AI-ready (for example Olivier Mills, Baobab Tech / WASH AI).
+- Case-study selection criteria: to draft with the Steering Group.
 
 ## Retreat elements (daily rhythm)
 
-Moments for conversation and connection and time in nature are scheduled, not left to chance.
-
+- Moments for conversation and connection and time in nature are scheduled, not left to chance.
 - Optional morning run before breakfast (self-organized, a posted route).
 - A daily walk: at least one conversation block per day happens walking, for example the case-study debrief or a use-case discussion as a walk-and-talk.
 - Being in nature: breaks go outside by default when weather allows.
@@ -93,13 +128,12 @@ Moments for conversation and connection and time in nature are scheduled, not le
 
 ## The week
 
-Ground rules for every day: the day starts at 08:30 with the official session start at 09:00 (Monday's arrival buffer and opening are the exception); breaks on the hour (5 and 10 minutes); 10-minute physical activity blocks between sessions in addition to the breaks; no module ever longer than one hour; close at 16:30 (Friday closes at 15:00).
-
-Teaching method: every session is a mix of introductory slides, participatory live coding, peer-to-peer instruction, and spaced practice. The training sessions contain no talks. Taught sessions alternate with independent work sessions in which participants work on their own projects.
-
-Case studies keep the practical path: their content is developed together with the selected case-study presenters so each one is a worked, hands-on session rather than a talk with slides.
-
-The Git and GitHub foundations are taught as concepts, but participants apply each one to their own data inside the exercises, so they build the week's output while learning the concepts.
+- Ground rules for every day: the day starts at 08:30 with the official session start at 09:00 (Monday's arrival buffer and opening are the exception); breaks on the hour (5 and 10 minutes); 10-minute physical activity blocks between sessions in addition to the breaks; no module ever longer than one hour; close at 16:30 (Friday closes at 15:00).
+- Teaching method: every session is a mix of introductory slides, participatory live coding, peer-to-peer instruction, and spaced practice. The training sessions contain no talks. Taught sessions alternate with independent work sessions in which participants work on their own projects.
+- Pedagogy: the week invests in publishing first, so participants see what the end product looks like and what it does for the sector and for them personally. The Thursday data management strategy work then reaches back to collection, storage, and management inside their organisation.
+- Data security is taught where the risk sits: inside the Tuesday FAIR block (sharing decisions) and inside the Wednesday agentic AI block (what leaves the machine). Both use hands-on examples on the participants' own data and end with guardrail measures. The precourse dataset review makes sure no sensitive data enters the workshop in the first place.
+- Case studies keep the practical path: their content is developed together with the selected case-study presenters so each one is a worked, hands-on session rather than a talk with slides.
+- The Git and GitHub foundations are taught as concepts, but participants apply each one to their own data inside the exercises, so they build the week's output while learning the concepts.
 
 ### Monday - arrival and foundations
 
@@ -112,7 +146,7 @@ The Git and GitHub foundations are taught as concepts, but participants apply ea
 | 15:00 to 16:30 | Case study |
 | 16:30 | Close |
 
-Precourse dependency: the Git and GitHub modules assume the precourse work is done between selection and one week before the start, so everyone arrives with accounts, a completed setup, a clean browser with the relevant bookmarks, and the readings behind them.
+- Precourse dependency: the Git and GitHub modules assume the precourse work is done between selection and one week before the start, so everyone arrives with accounts, a completed setup, a clean browser with the relevant bookmarks, and the readings behind them.
 
 ### Tuesday
 
@@ -120,21 +154,28 @@ Precourse dependency: the Git and GitHub modules assume the precourse work is do
 |----|----|
 | 09:00 to 11:00 | Two modules: GitHub Task & Project Management |
 | 11:00 to 12:00 | Data project work |
-| 13:00 to 15:00 | FAIR data principles, including work sessions on the participants' own data to address them |
+| 13:00 to 15:00 | FAIR data principles and responsible sharing, with work sessions on the participants' own data |
 | 15:00 to 16:30 | Case study, discussions |
 | 16:30 | Close |
+
+- Responsible sharing: "as open as possible, as closed as necessary" is a trainable structure. Graded sharing (who gets access, crossed with how processed the data is); where data is too sensitive to publish, the cleaning and anonymising code stays open so the process is transparent. There is a defensible way to share something from every dataset.
+- The worked example is the custodians' own near miss: washopenresearch scraped about 1,000 corresponding author emails into a CC BY dataset. Lessons: "it was public" does not remove GDPR scope; CC BY covers copyright and says nothing about privacy; a field the analysis never uses is dropped; archives are permanent, so sensitive fields are settled before archiving.
+- Qualitative data floor for participants who bring audio or interview data: voice is biometric data, anonymisation has limits, consent is a process.
+- Tidy data discipline: one observation per row, one variable per column, no merged cells, no colour as information. The biggest gap between a practitioner's spreadsheet and a publishable dataset.
+- The data dictionary as the artefact that makes data both FAIR and AI-ready: write down what you know about the data, and the same documentation serves a colleague, a successor, and an AI agent.
 
 ### Wednesday
 
 | Time | Block |
 |----|----|
-| Morning | Excursion (form to decide). The teaching side uses this window to run through all the work done so far and identify progress in each project |
-| 13:00 to 15:00 | Agentic AI |
+| Morning | Morning walk (half a day) with a walking case-study debrief. The teaching side uses this window to run through all the work done so far and identify progress in each project |
+| 13:00 to 15:00 | Agentic AI, including data security with agents |
 | 15:00 to 16:30 | Personal project work with agentic AI |
 | 16:30 | Close |
 | Evening | Walk, run, fire. Topic: AI disruption of the workplace |
 
 - The agentic AI blocks are the fastest-moving part of the programme and might look different from today's tools; that is built in by design. Borrow concepts from the AI Playground session series we plan to host at ETHZ.
+- Data security with agents: what leaves the machine when a file is dragged into a chat; which accounts and tools hold which data; personal and sensitive information as the boundary. Hands-on with the participant's own package, ending with guardrail measures (what to share with an agent, what to strip first, how to check).
 
 ### Thursday
 
@@ -145,31 +186,59 @@ Precourse dependency: the Git and GitHub modules assume the precourse work is do
 | 15:00 to 16:30 | Case study |
 | 16:30 | Close |
 
+- The Thursday morning presentations are the scientific content participants contribute to the week, alongside their datasets.
+
 ### Friday
 
 | Time | Block |
 |----|----|
-| 09:00 to 11:30 | Quarto website workshop (the RDMSS (add reference to material at the end) workshop, slightly extended to 2.5 hours) |
+| 09:00 to 11:30 | Quarto website workshop (the RDMSS workshop, slightly extended to 2.5 hours; see References) |
 | 13:00 to 14:00 | AI session: craft the personal website and publish it (for participants who brought their CVs to the morning workshop) |
-| 14:00 to 15:00 | Closing session: the week summarized through the outputs that were created, and commitment confirmed for the coming R data science class (ds4owd-003) |
+| 14:00 to 15:00 | Closing session: the week summarized through the outputs that were created, the evaluation survey completed in the room, and commitment confirmed for the coming R data science class (ds4owd-003) |
 | 15:00 | Close, end of the week |
 
 - The CV option: one additional project idea to learn Quarto is to develop a personal website based on the participants CV data. CV could be a submitted item on the application and help us see feasbility or prepare for this to be an active element. The afternoon AI session can be used to craft their website and publish it the same day.
 - Friday closes at 15:00 rather than 16:30, travel-friendly, mirroring the Monday arrival buffer.
 - The afternoon split (13:00/14:00) is a placement, to confirm; dictated fixed points are the 2.5-hour morning workshop, the strong closing session, and the 15:00 close.
 
-## Take-home outputs
+## Participant outputs
 
 Every participant leaves with:
 
 - Their dataset published as a documented data package (final state by Friday, DOI archiving supported).
+- Contributor credit: the package lists every contributor with an ORCID iD, including surveyors, lab managers, and field teams that author lists omit, citable through the DOI.
 - Durable skills: Git, GitHub, Quarto, FAIR data handling, safe work with agentic AI.
+- Named competencies: the skills map onto the DigComp areas information and data literacy, digital content creation, and safety. Tidy data, documentation, and credential and account hygiene (the latter part of the precourse work) are taught as competencies in their own right.
 - A personal website, published on Friday.
 - A draft plan for their own organisation: a data management strategy outline or data management plan, drafted in the Thursday afternoon work session so the practice transfers home.
 - The enrollment path into ds4owd-003.
 
-## Post-workshop follow-up (immediate)
+## Workshop outputs
+
+Beyond the participant level, the week produces:
+
+- 48 published data packages on a shared GitHub organisation, archived with DOIs.
+- A concise workshop report by the custodians in the format AGUASAN requests.
+- A public interactive website or dashboard that lets others explore the workshop outputs.
+- A report with recommendations for the strategic directions of AGUASAN, and in particular SDC, RésEAU, and the Swiss Water Partnership, on data management and open data in the sector.
+- Data and results of the registration survey (the ds4owd pre-course survey, tested twice), anonymised, as a baseline of digital skills in the sector.
+- Results of the evaluation survey conducted on the final day.
+- Proposed: an impact monitoring plan that tracks the downstream effects of the week on data management practices, at six and twelve months.
+- Proposed: a research article on the workshop itself, the week documented as an open data publishing experiment across the sector (who came, the method, the published packages, what the monitoring finds), with custodians and participants as co-authors.
+
+## Post-workshop follow-up
 
 - The follow-up is immediate: ds4owd-003 starts within two weeks of the workshop week.
 - Workshop participants enter the course with their dataset already published and practice their newly developed R skills directly on their own data.
 - Exercises are individualized, produced from each participant's data package rather than generic teaching data.
+- The evaluation survey results and the custodian report follow within two months of the week; the recommendations report is drafted with the Steering Group.
+- The impact monitoring plan runs at six and twelve months, and the research article follows the twelve month point (both proposed).
+
+## References
+
+- Quarto workshop material (RDMSS): <https://quarto-rdmss-26.github.io/website/>
+- Git for scientists precourse material: <https://gitforsci-cis.github.io/website/>
+- Demand evidence: "Who signs up for openwashdata training", the accompanying document rendered from the same repository.
+- DigComp, the European Digital Competence Framework for Citizens: <https://joint-research-centre.ec.europa.eu/digcomp_en>
+- openwashdata data catalogue: <https://openwashdata.org/pages/gallery/data/>
+- ds4owd pre-course survey (open source): <https://github.com/ds4owd-dev/pre-course-survey>

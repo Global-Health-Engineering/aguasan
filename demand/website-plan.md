@@ -23,7 +23,7 @@ each, what already exists to reuse, and what is missing.
 |------|--------------------------|----------------|
 | **Home** (`index.qmd`) | The bid in three sentences + the one ask; links onward | new, short |
 | **The topic** (`topic.qmd`) | Working title, relevance, why now, what makes it different | `concept-note/concept-note.qmd` (problem, vision, why-now, what-different) |
-| **Who it's for** (`demand.qmd`) | THE evidence of demand - the 7 figures + narrative | `proposal/figures/*` + `demand/make-figures.R`; proposal section 4.1 |
+| **Who it's for** (`demand.qmd`) | THE evidence of demand - the 7 figures + narrative | the figure chunks in `proposal/demand-analysis.qmd` + `proposal/demand-data.R`; proposal section 4.1 |
 | **The week** (`week.qmd`) | Backdated timeline + day-by-day, retreat rhythm, evenings | `proposal/week-outline-draft.qmd` |
 | **Selection** (`selection.qmd`) | How the 30 are chosen; case-study criteria | outline "Participant selection" + "Case studies"; ties to the pre-course survey as the screening instrument |
 | **Outcomes** (`outcomes.qmd`) | What the week produces: published packages, DMPs, skills | concept-note "where it leads" + proposal section 5 |

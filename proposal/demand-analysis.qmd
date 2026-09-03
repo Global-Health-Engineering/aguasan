@@ -13,7 +13,54 @@ format:
   owd-typst:
     toc: true
     fig-cap-location: bottom
+execute:
+  echo: false
+  warning: false
+  message: false
+# PNG through ragg: the cairo SVG device needs XQuartz, which is not on every machine
+fig-format: png
+fig-dpi: 150
+# one size for every figure, so text scales the same on the page
+fig-width: 8
+fig-height: 4.8
+knitr:
+  opts_chunk:
+    dev: "ragg_png"
 ---
+
+```{r}
+#| label: setup
+#| include: false
+library(ggplot2)
+source("demand-data.R")
+
+# brand palette (openwashdata/brand) and the plot theme
+owd_purple      <- "#5b195b"
+owd_purple_dark <- "#2d0e2d"
+owd_purple_lt   <- "#c8a3c8"
+ink             <- "#1e1e1e"
+paper           <- "#f5eef5"
+cohort_cols     <- c(`ds4owd-001` = owd_purple_lt, `ds4owd-002` = owd_purple)
+use_fill        <- c(never = "#d8ccd8", occasional = owd_purple_lt,
+                     regular = owd_purple, rely = owd_purple_dark)
+
+theme_owd <- function(base_size = 15) {
+  theme_minimal(base_size = base_size) +
+    theme(
+      plot.background  = element_rect(fill = paper, colour = NA),
+      panel.background = element_rect(fill = paper, colour = NA),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.y = element_blank(),
+      text = element_text(colour = ink),
+      plot.title = element_text(face = "bold", colour = owd_purple_dark, size = base_size + 3),
+      plot.subtitle = element_text(colour = "#6b665e"),
+      legend.position = "top", legend.title = element_blank(),
+      strip.text = element_text(face = "bold", colour = owd_purple_dark),
+      axis.text = element_text(colour = ink),
+      plot.title.position = "plot"
+    )
+}
+```
 
 The demand for practical, open, reproducible WASH data skills is measured. The free Data Science for openwashdata course has run twice, drawing **421 registrations across the two cohorts (ds4owd-001 and ds4owd-002)**. The figures below come from the pre-course surveys those participants completed at sign-up. They describe the audience the 2027 retreat would serve, and the pre-course survey that produced them is the same instrument that would screen and baseline workshop applicants.
 
@@ -21,11 +68,46 @@ The demand for practical, open, reproducible WASH data skills is measured. The f
 
 Two cohorts, 421 people, and a mix of organisations that mirrors the community AGUASAN convenes: NGOs, academia, government, consultancies, and the private sector.
 
-![Registrations across the two ds4owd cohorts.](figures/07-growth.png)
+```{r}
+#| label: fig-growth
+#| fig-cap: "Registrations across the two ds4owd cohorts."
+ggplot(d_grow, aes(cohort, registrations, fill = cohort)) +
+  geom_col(width = 0.55, show.legend = FALSE) +
+  geom_text(aes(label = registrations), vjust = -0.4, size = 5, fontface = "bold", colour = ink) +
+  scale_fill_manual(values = cohort_cols) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  labs(title = "Two cohorts, 421 registrations",
+       subtitle = "Sustained demand across the two ds4owd iterations",
+       x = NULL, y = NULL) +
+  theme_owd() + theme(panel.grid.major.x = element_blank())
+```
 
-![Where registrants work, both cohorts.](figures/03-sector-by-cohort.png)
+```{r}
+#| label: fig-sector
+#| fig-cap: "Where registrants work, both cohorts."
+ggplot(d_org, aes(pct, org, fill = cohort)) +
+  geom_col(position = position_dodge(0.72), width = 0.66) +
+  scale_fill_manual(values = cohort_cols) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.1))) +
+  labs(title = "Demand is cross-sector, in both cohorts",
+       subtitle = "NGO, academia, government, consulting and private sector all sign up",
+       x = "% of cohort (org type answered)", y = NULL) +
+  theme_owd()
+```
 
-![Country of residence, ds4owd-002.](figures/08-geography.png)
+```{r}
+#| label: fig-geography
+#| fig-cap: "Country of residence, ds4owd-002."
+ggplot(d_ctry, aes(n, name)) +
+  geom_col(fill = owd_purple, width = 0.7) +
+  geom_text(aes(label = n), hjust = -0.3, size = 4, colour = ink) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(title = "A global, Global-South-led audience",
+       subtitle = paste0(n2, " ds4owd-002 registrants from ", n_countries,
+                         " countries (~64% Global South)\ntop 15 shown"),
+       x = NULL, y = NULL) +
+  theme_owd()
+```
 
 They come from **45 countries, with a strong Global-South majority** (Nigeria, Uganda, Ghana, Ethiopia, Malawi, and South Africa lead the list). This is the reach the workshop's diversity goals depend on.
 
@@ -33,11 +115,49 @@ They come from **45 countries, with a strong Global-South majority** (Nigeria, U
 
 The people who sign up are early-to-mid career and, by their own account, not yet coders. 
 
-![Programming experience at sign-up, both cohorts.](figures/01-skill-by-cohort.png)
+```{r}
+#| label: fig-skill
+#| fig-cap: "Programming experience at sign-up, both cohorts."
+ggplot(d_prog, aes(lvl, pct, fill = cohort)) +
+  geom_col(position = position_dodge(0.72), width = 0.66) +
+  geom_text(aes(label = paste0(round(pct), "%")),
+            position = position_dodge(0.72), vjust = -0.3, size = 3.8, colour = ink) +
+  scale_fill_manual(values = cohort_cols) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(title = "They arrive as beginners, in both cohorts",
+       subtitle = paste0("Programming experience at sign-up (ds4owd-001 n=", n1,
+                         ", ds4owd-002 n=", n2, ")"),
+       x = NULL, y = "% of cohort") +
+  theme_owd()
+```
 
-![Where their data lives now, both cohorts.](figures/02-dataformat-by-cohort.png)
+```{r}
+#| label: fig-dataformat
+#| fig-cap: "Where their data lives now, both cohorts."
+ggplot(d_fmt, aes(fmt, pct, fill = cohort)) +
+  geom_col(position = position_dodge(0.72), width = 0.66) +
+  geom_text(aes(label = paste0(round(pct), "%")),
+            position = position_dodge(0.72), vjust = -0.3, size = 3.8, colour = ink) +
+  scale_fill_manual(values = cohort_cols) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(title = "Their data starts in spreadsheets",
+       subtitle = "Where registrants store data now (~70% spreadsheets in both cohorts)",
+       x = NULL, y = "% of cohort") +
+  theme_owd()
+```
 
-![Career stage, proxied by age, ds4owd-002.](figures/09-career-stage.png)
+```{r}
+#| label: fig-career-stage
+#| fig-cap: "Career stage, proxied by age, ds4owd-002."
+ggplot(d_age, aes(pct, a)) +
+  geom_col(fill = owd_purple, width = 0.7) +
+  geom_text(aes(label = paste0(pct, "%")), hjust = -0.25, size = 4, colour = ink) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(title = "An early-to-mid-career audience",
+       subtitle = paste0("Age band as a proxy for career stage, ds4owd-002 (n=", n2, "); ~75% under 45"),
+       x = "% of cohort", y = NULL) +
+  theme_owd()
+```
 
 Around three-quarters have written little or no code, roughly 70 percent keep their data in spreadsheets, and about three-quarters are under 45. Their data is unpublished not from unwillingness but because the skills and habits are missing. That gap is what the week closes.
 
@@ -45,14 +165,51 @@ Around three-quarters have written little or no code, roughly 70 percent keep th
 
 The audience is adopting AI fast, but for words, not for the code-and-data work the sector needs. This is the sharpest argument for the retreat: it meets people where they already are and points their AI use at their own datasets.
 
-![LLM adoption jumped between cohorts.](figures/04-llm-adoption-shift.png)
+```{r}
+#| label: fig-llm-adoption
+#| fig-cap: "LLM adoption jumped between cohorts."
+ggplot(d_llm, aes(cohort, pct, fill = cohort)) +
+  geom_col(width = 0.55, show.legend = FALSE) +
+  geom_text(aes(label = paste0(round(pct), "%")), vjust = -0.35, size = 5,
+            fontface = "bold", colour = ink) +
+  scale_fill_manual(values = cohort_cols) +
+  scale_y_continuous(limits = c(0, 100), expand = expansion(mult = c(0, 0.08))) +
+  labs(title = "AI adoption jumped between cohorts",
+       subtitle = "Share using at least one LLM tool: 56% (ds4owd-001) to 96% (ds4owd-002)",
+       x = NULL, y = "% of cohort using an LLM") +
+  theme_owd() + theme(panel.grid.major.x = element_blank())
+```
 
-![LLM platforms used, ds4owd-002.](figures/05-llm-platforms.png)
+```{r}
+#| label: fig-llm-platforms
+#| fig-cap: "LLM platforms used, ds4owd-002."
+ggplot(d_plat, aes(n, label)) +
+  geom_col(fill = owd_purple, width = 0.7) +
+  geom_text(aes(label = paste0(n, "  (", pct, "%)")), hjust = -0.12, size = 3.8, colour = ink) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.2))) +
+  labs(title = "ChatGPT dominates; assistants are consumer-grade",
+       subtitle = paste0("LLM platforms used by ds4owd-002 registrants (n=", n2, "), top 10"),
+       x = NULL, y = NULL) +
+  theme_owd()
+```
 
-![What they use LLMs for, ds4owd-002.](figures/06-llm-tasks.png)
+```{r}
+#| label: fig-llm-tasks
+#| fig-cap: "What they use LLMs for, ds4owd-002."
+ggplot(d_task, aes(pct, task, fill = level)) +
+  geom_col(width = 0.72) +
+  scale_fill_manual(values = use_fill, breaks = use_levels,
+                    labels = c("Never", "Occasional", "Regular", "Rely on it")) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.02))) +
+  labs(title = "They use AI for words, not yet for code and data",
+       subtitle = paste0("How ds4owd-002 registrants use LLMs by task (n=", n2, ")\n",
+                         "coding and data analysis lag"),
+       x = "% of cohort", y = NULL) +
+  theme_owd()
+```
 
 Use of at least one LLM tool rose from 56 percent in the first cohort to 96 percent in the second. But that use is consumer-grade (ChatGPT dominates) and aimed at summarising and translating, not at coding or data analysis, where the "never" share is highest. The retreat turns broad, shallow AI familiarity into safe, practical use on the participant's own data.
 
 # A note on the data
 
-These are registration-time self-reports. The sector, skill, and data-format figures cover both cohorts; geography, career stage, and the AI detail come from the second cohort only, because the two surveys asked slightly different questions. Career stage is shown as an age proxy: the survey has no direct seniority or leadership field yet, a gap flagged for the next survey revision. Every figure is labelled with its cohort and sample size, and all are reproducible from the de-identified survey extracts via `demand/make-figures.R`.
+These are registration-time self-reports. The sector, skill, and data-format figures cover both cohorts; geography, career stage, and the AI detail come from the second cohort only, because the two surveys asked slightly different questions. Career stage is shown as an age proxy: the survey has no direct seniority or leadership field yet, a gap flagged for the next survey revision. Every figure is labelled with its cohort and sample size, and each figure is produced by the code in this document from the de-identified survey extracts, with the data prepared by `demand-data.R` next to it.

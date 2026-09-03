@@ -18,6 +18,8 @@ sources/
 # file formats (the brand extension's Word reference document is the one exception)
 *.docx
 !proposal/_extensions/openwashdata/owd/reference.docx
+# rendered PDFs next to the sources (RStudio renders in place); the shared copies live in exports/
+proposal/*.pdf
 
 # review exports (docx + CSVs), regenerated from source by the render/extract
 # scripts; the scripts are tracked, their output is not

@@ -9,7 +9,7 @@ For the full rationale, vision, and supporting evidence, see the [concept note](
 ```
 .
 ├── proposal/        The proposal, the week outline draft, and the demand analysis
-├── demand/          The figure script, gitignored survey extracts, the website plan
+├── demand/          Gitignored survey extracts and the website plan
 ├── slides/          Pitch slides for the topic selection session
 ├── concept-note/    Standalone 1-page concept note (topic-only, no template)
 ├── references/      Curated reference material (web sources + index)
@@ -23,7 +23,8 @@ For the full rationale, vision, and supporting evidence, see the [concept note](
 - `README.qmd` - the proposal, filled in from the concept note. This is the version to submit.
 - `README.md` - the rendered GFM output, so the proposal displays on GitHub when browsing the `proposal/` folder.
 - `week-outline-draft.qmd` - the five-day week outline for the revised option (backdated timeline, participant selection, travel grants, case studies, day-by-day schedule, outputs). Renders in the openwashdata brand as Word and PDF: `quarto render proposal/week-outline-draft.qmd --to owd-docx` and `--to owd-typst`.
-- `demand-analysis.qmd` - the demand evidence narrative around the nine figures in `proposal/figures/`; renders in the brand as PDF: `quarto render proposal/demand-analysis.qmd --to owd-typst`.
+- `demand-analysis.qmd` - the demand evidence: nine figures, each drawn by an R chunk in the document from the de-identified survey extracts in `demand/data/` (gitignored); renders in the brand as PDF: `quarto render proposal/demand-analysis.qmd --to owd-typst`.
+- `demand-data.R` - the data preparation the document sources: reads the extracts and builds one tidy data frame per figure, no plotting.
 - `_extensions/` and `_brand/` - the vendored [openwashdata/quarto-owd](https://github.com/openwashdata/quarto-owd) extension and the brand mirror it reads. Refresh with `quarto update openwashdata/quarto-owd` (Word styles) and `quarto use brand openwashdata/brand` (brand file), run inside `proposal/`.
 - `extract-tables.py` - writes the outline's timeline and daily tables to `week-schedule.csv` (one sheet: section, time, block) for sharing and review. Run from the repo root after editing the outline: `python3 proposal/extract-tables.py`.
 - `week-schedule.csv` - the extracted schedule, regenerated from the outline; do not edit by hand.

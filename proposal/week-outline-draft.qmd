@@ -41,6 +41,35 @@ What better, open data enables for WASH itself, the strategic question raised in
 - The demand is real
   - The accompanying document "Who signs up for openwashdata training" shows 421 registrations across two course cohorts from 45 countries, most from the global south, most arriving as beginners, and nearly all using AI tools for words rather than for their data (status 2025).
 
+## How the week takes up the other proposals
+
+- The topic selection session asked for the withdrawn digital tools proposal to be integrated and put the two strategic proposals forward as the alternative option. Each of the three has a place in this week, and each is an invitation to its proposers to take part.
+
+### Data collection tools
+
+From the digital tools proposal by Christian Zurbrügg (Eawag, Sandec), withdrawn at the selection session in favor of this option.
+
+- Every shared dataset shows how it was collected. The application survey asks which data collection tools produced the dataset, which gives a picture of what is in use across the cohort and where gaps exist relative to the tools the digital tools proposal put forward.
+- Targeted support follows in the precourse window: participants whose data calls for it get support with the relevant collection tool, rather than presentations to everyone.
+- The difference to the workshop's own tools: data management workflows (Git, GitHub, Quarto, data packages) apply to any data; collection tools are specific to a data type, so that support is targeted.
+- Proposed collaboration: where the survey shows data collection tools of the kind their proposal had in mind (digital and remote tools for baseline and performance data), Christian's team supports those participants in the precourse window, and the tool overview that comes out of it is published as a data package with a DOI, the output their proposal aimed for. Christian and team members are invited to take part in the week.
+
+### Careers and skills
+
+From the after the aid era proposal by Sean Furey (Skat Foundation, RWSN).
+
+- The proposal asks what the future role of Northern institutions and professionals is in a sector reshaped by localization and AI, and how people are recruited and developed into WASH careers now. Its output is a career and capacity development brief for development organizations, universities, and professional associations.
+- The week produces evidence for that brief: the anonymized registration survey as a baseline of digital skills across the sector, and a cohort of practitioners who leave as publishable, AI-capable data authors.
+- Proposed collaboration: the brief is co-authored with Sean and RWSN after the week. Sean and RWSN team members are invited to take part in the week, and the Wednesday evening topic (AI disruption of the workplace) is a good place for his workforce question.
+
+### Resilience in the polycrisis
+
+From the polycrisis proposal by Christoph Lüthi, John Brogan, and Dorothee Spuhler (Eawag, Helvetas, and OST).
+
+- The proposal asks how the sector builds resilience in the polycrisis: cross-sectoral linkages, long-term partnerships as a new form of cooperation, and funding modalities that bring in actors outside WASH. Its outputs are a declaration and a roadmap.
+- The week supplies the data side of that argument: evidence that disappears with defunded programs and impact that cannot be measured (see Why this week for WASH), answered by 48 published data packages on shared infrastructure. The roadmap has a home in the recommendations report for AGUASAN, SDC, RésEAU, and the Swiss Water Partnership.
+- Proposed collaboration: the closing session ends with a sector open data declaration that participants sign, drafted with Christoph's team; Christoph, John, and Dorothee are invited to take part in the week.
+
 ## Working assumptions
 
 - Event week: Monday 6 to Friday 10 September 2027 (beginning of September; exact week to confirm with the organizers).
@@ -55,7 +84,7 @@ What better, open data enables for WASH itself, the strategic question raised in
 - The timeline and the five daily schedules are also shared as a compact overview in the accompanying spreadsheet (week-schedule.xlsx), generated from the tables in this document.
 
 | When | What |
-|---------|-----------------------|
+|----|----|
 | Now (Sep 2026) | Venue scouting starts. Outline due to Roger and Sandra 2026-09-04 |
 | Mid to late Sep 2026 | Topic selection decision by Skat and SDC |
 | Mid-Oct 2026 | Preparatory day back-to-back with the AGUASAN meeting |
@@ -106,18 +135,12 @@ What better, open data enables for WASH itself, the strategic question raised in
   - Childcare is a named budget line in the workshop budget. EMBO earmarks a fixed childcare sum per funded workshop; the same model applies here.
 - The grant count follows the budget answer: the SNSF application covers the first 8 to 12 participants from abroad, the SDC line covers the rest.
 
-## Data collection tools (integrating the withdrawn digital tools proposal)
-
-- Every shared dataset shows how it was collected. The application survey asks which data collection tools produced the dataset, which gives a picture of what is in use across the cohort and where gaps exist relative to the tools the digital tools proposal put forward.
-- Targeted support follows in the precourse window: participants whose data calls for it get support with the relevant collection tool, rather than presentations to everyone.
-- The difference to the workshop's own tools: data management workflows (Git, GitHub, Quarto, data packages) apply to any data; collection tools are specific to a data type, so that support is targeted.
-
 ## Case studies
 
 - This list is still being built. The candidates below are grouped by the kind of case each one shows; the final selection and the case-study selection criteria will be confirmed with the Steering Group.
 
 | Category | Case | What it shows |
-|--------|--------------|------------------|
+|----|----|----|
 | Practitioner publishing own data | Course capstones (22 from the first cohort, 48 from the second) | Individuals publishing a self-chosen dataset, the direct model for the week |
 | Practitioner publishing own data | Kelsey Shaw | A first-cohort participant who published her PhD data and co-authored a paper in Environmental Science & Technology |
 | Institutional / data stewardship | Data-stewardship work in Malawi with NGO BASEflow, Emmanuel Mhango / Muthi Nhlema | The institutional case for open data inside an organization |
@@ -166,7 +189,7 @@ What better, open data enables for WASH itself, the strategic question raised in
 ### Monday - arrival and foundations
 
 | Time | Block |
-|-------|-------------------------|
+|----|----|
 | Until 10:30 | Arrival buffer: the first two hours are parked because not everyone can travel on weekends |
 | 10:30 to 11:00 | Opening |
 | 11:00 to lunch | One module: Git / GitHub Foundations |
@@ -180,7 +203,7 @@ What better, open data enables for WASH itself, the strategic question raised in
 ### Tuesday
 
 | Time | Block |
-|-------|-------------------------|
+|----|----|
 | 08:30 to 09:00 | Arrival block |
 | 09:00 to 11:00 | Two modules: GitHub Task & Project Management |
 | 11:00 to 12:00 | Data project work |
@@ -200,7 +223,7 @@ What better, open data enables for WASH itself, the strategic question raised in
 ### Wednesday
 
 | Time | Block |
-|-------|-------------------------|
+|----|----|
 | 08:30 to 10:30 | Morning walk with a walking case-study debrief; the teaching side runs through all the work so far and identifies progress in each project |
 | 10:30 to 12:00 | Agentic AI, first module: concepts and a first hands-on run with an agent on the participant's own package |
 | 13:00 to 15:00 | Agentic AI, modules two and three, including data security with agents |
@@ -216,7 +239,7 @@ What better, open data enables for WASH itself, the strategic question raised in
 ### Thursday
 
 | Time | Block |
-|-------|-------------------------|
+|----|----|
 | 08:30 to 09:00 | Arrival block |
 | 09:00 to 10:30 | Selected participants share their in-workshop work as case studies, invited on the basis of the Wednesday progress review |
 | 10:30 to 12:00 | Personal project work with agentic AI, taking up what the morning presentations inspired |
@@ -230,7 +253,7 @@ What better, open data enables for WASH itself, the strategic question raised in
 ### Friday
 
 | Time | Block |
-|-------|-------------------------|
+|----|----|
 | 08:30 to 09:00 | Arrival block |
 | 09:00 to 11:30 | Quarto website workshop (the RDMSS workshop, slightly extended to 2.5 hours; see References) |
 | 13:00 to 14:00 | AI session: craft the personal website and publish it (for participants who brought their CVs to the morning workshop) |
@@ -261,6 +284,8 @@ Beyond the participant level, the week produces:
 - A concise workshop report by the custodians in the format AGUASAN requests.
 - A public interactive website or dashboard that lets others explore the workshop outputs.
 - A report with recommendations for the strategic directions of AGUASAN, and in particular SDC, RésEAU, and the Swiss Water Partnership, on data management and open data in the sector.
+- Proposed: input to the career and capacity development brief from Sean Furey's proposal (see Careers and skills), co-authored with RWSN.
+- Proposed: a sector open data declaration signed by participants at the closing, drafted with Christoph Lüthi's team (see Resilience in the polycrisis).
 - Data and results of the registration survey (the Data Science for openwashdata pre-course survey), anonymized, as a baseline of digital skills in the sector.
 - Results of the evaluation survey conducted on the final day.
 - Proposed: an impact monitoring plan that tracks the downstream effects of the week on data management practices, at six and twelve months.

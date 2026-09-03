@@ -3,8 +3,9 @@
 .RData
 .Ruserdata
 
-# Quarto render artifacts
+# Quarto render artifacts (root and per-folder caches, incl. the Typst font cache)
 /.quarto/
+.quarto/
 *.html
 *_files/
 
@@ -14,8 +15,9 @@ sources/
 # audio never belongs in this repo, anywhere (moved to ~/archive/aguasan-audio/)
 *.m4a
 
-# file formats
+# file formats (the brand extension's Word reference document is the one exception)
 *.docx
+!proposal/_extensions/openwashdata/owd/reference.docx
 
 # review exports (docx + CSVs), regenerated from source by the render/extract
 # scripts; the scripts are tracked, their output is not

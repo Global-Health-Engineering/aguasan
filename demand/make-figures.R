@@ -1,6 +1,6 @@
 # Demand-analysis figures for the AGUASAN 2027 openwashdata bid.
 # Reads the de-identified ds4owd pre-course / registration survey extracts
-# (demand/data/, gitignored) and writes aggregate figures to demand/figures/.
+# (demand/data/, gitignored) and writes aggregate figures to proposal/figures/.
 # Palette matches the pitch deck (openwashdata/brand): owd-purple #5b195b.
 #
 # Comparable questions are faceted/dodged by cohort (ds4owd-001 vs -002);
@@ -38,7 +38,7 @@ theme_owd <- function(base_size = 15) {
     )
 }
 save_fig <- function(p, name, w = 8, h = 4.8) {
-  ggsave(file.path("demand/figures", name), p, width = w, height = h, dpi = 150, bg = paper)
+  ggsave(file.path("proposal/figures", name), p, width = w, height = h, dpi = 150, bg = paper)
 }
 
 s1 <- read_csv("demand/data/ds4owd-001-presurvey.csv", show_col_types = FALSE)
@@ -281,4 +281,4 @@ p_age <- ggplot(d_age, aes(pct, a)) +
   theme_owd(base_size = 14)
 save_fig(p_age, "09-career-stage.png", w = 8.5, h = 4.8)
 
-cat("Wrote 9 figures to demand/figures/\n")
+cat("Wrote 9 figures to proposal/figures/\n")

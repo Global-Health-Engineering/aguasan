@@ -25,6 +25,7 @@ For the full rationale, vision, and supporting evidence, see the [concept note](
 - `week-outline-draft.qmd` - the five-day week outline for the revised option (backdated timeline, participant selection, travel grants, case studies, day-by-day schedule, take-home outputs).
 - `demand-analysis.qmd` - the demand evidence narrative around the nine figures in `demand/figures/`; renders to a DOCX review export.
 - `extract-tables.py` - writes the outline's timeline and daily tables to one CSV in `exports/` (gitignored) for Google Sheets review. Run from the repo root: `python3 proposal/extract-tables.py`.
+- `make-schedule-xlsx.R` - turns that CSV into `exports/aguasan-week-schedule.xlsx`: a Gantt style Week sheet (blocks by day against 30 minute columns, filled by activity type), a Timeline sheet (overview rows against months), and the raw Data sheet. Run after the extractor: `Rscript proposal/make-schedule-xlsx.R`.
 
 ### `slides/`
 

@@ -1,6 +1,6 @@
 ---
 title: "AGUASAN 2027 week outline"
-subtitle: "Working draft for the revised practice-oriented option"
+subtitle: "Working draft for the revised proposal 'Publishing WASH Data Together: A Hands-On Retreat for an Open, AI-Ready Sector'"
 author: "Elizabeth Tilley, Lars Schöbitz - Global Health Engineering, ETH Zurich"
 date: today
 format:
@@ -15,20 +15,20 @@ Status: working draft for the revised proposal "Publishing WASH Data Together: A
 
 ## Why this week for WASH
 
-What better, open data enables for WASH itself, the strategic question raised in follow-up email from the topic selection session:
+What better, open data enables for WASH itself, the strategic question raised in the follow-up email from the topic selection session:
 
 - The WHO/UNICEF JMP has not been able to collect data on faecal sludge treatment in the global south for fifteen years. Utilities that manage and share their data would enable regional, national, and global estimates.
 - Reuse and combination come before collecting new data.
-  - Finding what someone else measured in another place, combining data sources, and re-analysing data that was only ever shared in summary form.
-- Data is collected twice today, and evidence disappears with a defunded programme.
-  - Monitoring data leaves with the programme, local institutions cannot build on what was measured in their own country, and the next programme starts its baseline from zero.
+  - Finding what someone else measured in another place, combining data sources, and re-analyzing data that was only ever shared in summary form.
+- Data is collected twice today, and evidence disappears with a defunded program.
+  - Monitoring data leaves with the program, local institutions cannot build on what was measured in their own country, and the next program starts its baseline from zero.
   - Open and discoverable publication keeps the evidence where the work continues.
 - Very little impact monitoring exists.
-  - The impact of WASH programmes and WASH research on access to and use of services cannot be measured without shared data as a shared ground truth.
+  - The impact of WASH programs and WASH research on access to and use of services cannot be measured without shared data as a shared ground truth.
 - Closed data makes WASH invisible to AI.
   - Practitioners ask AI tools first and those tools draw only on what is open and machine readable. If WASH evidence sits in closed PDFs, DOCX and other proprietary files, the answers that AI tools produce will remain poor.
 - AGUASAN supplies the trust while we provide a shared infrastructure.
-  - A community that has met since 1984 (the 2027 workshop is its 40th), across government, NGOs, research, consulting, and networks gains a shared working infrastructure in addition to the knowledge sharing platform (aguasan.ch). The week gives that network a shared GitHub organisation, published packages, and common formats (tidy CSV, data dictionaries) that make one organisation's data combinable with another's, in addition to allowing for increased collaboration through GitHub.
+  - A community that has met since 1984 (the 2027 workshop is its 40th), across government, NGOs, research, consulting, and networks gains a shared working infrastructure in addition to the knowledge sharing platform (aguasan.ch). The week gives that network a shared GitHub organization, published packages, and common formats (tidy CSV, data dictionaries) that make one organization's data combinable with another's, in addition to allowing for increased collaboration through GitHub.
 - The 2026 AGUASAN members list consists of about two thirds research, NGO, and consulting, with a small donor and policy group. The hands-on practical workshop speaks to that group as an opportunity to increase their competencies and skills.
 - The demand is real
   - The accompanying document "Who signs up for openwashdata training" shows 421 registrations across two course cohorts from 45 countries, most from the global south, most arriving as beginners, and nearly all using AI tools for words rather than for their data (status 2025).
@@ -43,6 +43,8 @@ What better, open data enables for WASH itself, the strategic question raised in
 - Venue scouting starts immediately.
 
 ## Backdated timeline
+
+- The timeline and the five daily schedules are also shared as a compact overview in the accompanying spreadsheet (week-schedule.xlsx), generated from the tables in this document.
 
 | When | What |
 |----|----|
@@ -71,7 +73,7 @@ What better, open data enables for WASH itself, the strategic question raised in
 - An application consists of a dataset, a survey, and a one-minute video.
 - The dataset is screened at submission. Participants contribute their dataset as scientific content to the week and are invited to co-author the research article on the workshop.
 - Cap: 48 participants.
-- The survey asks which data collection tools produced the dataset, so the week knows the tools in use and where targeted support is needed (partly covers Chris Zurbrügg's proposal).
+- The survey asks which data collection tools produced the dataset, so the week knows the tools in use and where targeted support is needed (partly covers the withdrawn digital tools proposal of Christian Zurbrügg).
 - Grant need is declared in a separate field that the quality pass does not see; it counts neither for nor against selection.
 - Selection concludes mid-June 2027.
 - Selection works in two passes. First a quality pass on the application: the dataset is real and can be brought, the survey answers indicate the applicant will do the pre-work, and the one-minute video shows they can explain why the data matters. Then a diversity pass across everyone who clears the quality bar, to compose a balanced cohort.
@@ -80,15 +82,15 @@ What better, open data enables for WASH itself, the strategic question raised in
   - Geography: a strong majority from resource-constrained countries.
   - Seniority: a mix from early-career practitioners to senior staff, so peers learn across levels.
   - Sector: water, sanitation, hygiene, and solid waste management represented, generally open when related to the overall work of these sectors.
-  - Employment: academia and research institutes, government and utilities, NGOs and civil society, private sector and consultants, bilateral and philanthropic donors, and multilateral organisations (UN agencies, development banks) represented. All are welcome, but a good balance representing AGUASAN community is intended.
+  - Employment: academia and research institutes, government and utilities, NGOs and civil society, private sector and consultants, bilateral and philanthropic donors, and multilateral organizations (UN agencies, development banks) represented. All are welcome, but a good balance representing the AGUASAN community is intended.
 - The pre-course survey used for "Data Science for openwashdata" (see References)
-  - The same instrument behind the demand evidence, is reused here to screen and baseline applicants, so selection rests on data rather than impressions.
+  - It is the same instrument behind the demand evidence and is reused here to screen and baseline applicants, so selection rests on data rather than impressions.
 
 ## Travel grants
 
 - Travel grants make the diversity goals possible as without them the geography and gender balance above cannot hold.
   - The people we most want in the room are the least able to self-fund.
-- Grants for women from resource-constrained countries, covering travel and accommodation for the workshop week.
+- Grants prioritize women from resource-constrained countries, covering travel and accommodation for the workshop week.
 - Childcare support, so a parent can bring a child and an additional carer and still take part.
 - Funding, two lines stacked:
   - A participant support line in the SDC workshop budget. The request goes to Skat and SDC in the autumn budget clarification.
@@ -96,7 +98,7 @@ What better, open data enables for WASH itself, the strategic question raised in
   - Childcare is a named budget line in the workshop budget. EMBO earmarks a fixed childcare sum per funded workshop; the same model applies here.
 - The grant count follows the budget answer: the SNSF application covers the first 8 to 12 participants from abroad, the SDC line covers the rest.
 
-## Data collection tools (integrating the withdrawn proposal)
+## Data collection tools (integrating the withdrawn digital tools proposal)
 
 - Every shared dataset shows how it was collected. The application survey asks which data collection tools produced the dataset, which gives a picture of what is in use across the cohort and where gaps exist relative to the tools the digital tools proposal put forward.
 - Targeted support follows in the precourse window: participants whose data calls for it get support with the relevant collection tool, rather than presentations to everyone.
@@ -106,31 +108,31 @@ What better, open data enables for WASH itself, the strategic question raised in
 
 - This list is still being built. The candidates below are grouped by the kind of case each one shows; the final selection and the case-study selection criteria will be confirmed with the Steering Group.
 
-+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Category                           | Case                                                                                                                                         | What it shows                                                                                                                                                                            |
-+====================================+==============================================================================================================================================+==========================================================================================================================================================================================+
-| Practitioner publishing own data   | Course capstones (22 from the first cohort, 48 from the second)                                                                              | Individuals publishing a self-chosen dataset, the direct model for the week                                                                                                              |
-+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Practitioner publishing own data   | Kelsey Shaw                                                                                                                                  | A first-cohort participant who published her PhD data and co-authored a paper in Environmental Science & Technology                                                                      |
-+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Institutional / data stewardship   | Data-stewardship work in Malawi with NGO BASEflow, Emmanuel Mhango / Muthi Nhlema                                                            | The institutional case for open data inside an organisation                                                                                                                              |
-+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Institutional / data stewardship   | FAIRqual project members                                                                                                                     | The harder case: sharing qualitative material (interviews, workshops) under FAIR principles while protecting subjects                                                                    |
-+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| National / city open data at scale | Malawi, mWater                                                                                                                               | \~47,000 water points serving 4.8 million people, captured and openly accessible                                                                                                         |
-+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| National / city open data at scale | Cape Town, South Africa                                                                                                                      | Weekly dam levels on an open portal; third parties build on the licensed data                                                                                                            |
-+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| National / city open data at scale | Kampala, Uganda, Weyonje                                                                                                                     | KCCA's GIS-enabled faecal-sludge management app                                                                                                                                          |
-+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| National / city open data at scale | Finland, VEETI                                                                                                                               | A compulsory national water-services database with open APIs                                                                                                                             |
-+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Under consideration (WASH / Swiss) | Wasser für Wasser; Canton Zurich statistical office                                                                                          | Additional sector and Swiss open-data candidates, not yet detailed                                                                                                                       |
-+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Reproducibility-network partners   | AREN (African Reproducibility Network, founded 2022 by Emmanuel Boakye; runs open-science training and ambassador programmes across Africa); | Reach and reproducibility-community links rather than WASH datasets: a route to African practitioners and a partner for the open-science and AI-disclosure angle, beyond the WASH sector |
-|                                    |                                                                                                                                              |                                                                                                                                                                                          |
-|                                    | GFRN (Global Federation of Reproducibility Networks, whose AI-disclosure working group Lars Schöbitz is part of)                             |                                                                                                                                                                                          |
-+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Category                           | Case                                                                                                                                                                                                                                                        | What it shows                                                                                                                                                                            |
++====================================+=============================================================================================================================================================================================================================================================+==========================================================================================================================================================================================+
+| Practitioner publishing own data   | Course capstones (22 from the first cohort, 48 from the second)                                                                                                                                                                                             | Individuals publishing a self-chosen dataset, the direct model for the week                                                                                                              |
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Practitioner publishing own data   | Kelsey Shaw                                                                                                                                                                                                                                                 | A first-cohort participant who published her PhD data and co-authored a paper in Environmental Science & Technology                                                                      |
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Institutional / data stewardship   | Data-stewardship work in Malawi with NGO BASEflow, Emmanuel Mhango / Muthi Nhlema                                                                                                                                                                           | The institutional case for open data inside an organization                                                                                                                              |
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Institutional / data stewardship   | Data stewardship at ETH Global Health Engineering, the hosts' own practice (see References)                                                                                                                                                                 | How a research group runs data stewardship day to day; the practice behind the Thursday data management strategy work                                                                    |
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Institutional / data stewardship   | FAIRqual project members                                                                                                                                                                                                                                    | The harder case: sharing qualitative material (interviews, workshops) under FAIR principles while protecting subjects                                                                    |
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| National / city open data at scale | Malawi, mWater                                                                                                                                                                                                                                              | \~47,000 water points serving 4.8 million people, captured and openly accessible                                                                                                         |
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| National / city open data at scale | Cape Town, South Africa                                                                                                                                                                                                                                     | Weekly dam levels on an open portal; third parties build on the licensed data                                                                                                            |
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| National / city open data at scale | Kampala, Uganda, Weyonje                                                                                                                                                                                                                                    | KCCA's GIS-enabled faecal-sludge management app                                                                                                                                          |
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| National / city open data at scale | Finland, VEETI                                                                                                                                                                                                                                              | A compulsory national water-services database with open APIs                                                                                                                             |
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Under consideration (WASH / Swiss) | Wasser für Wasser; Canton Zurich statistical office                                                                                                                                                                                                         | Additional sector and Swiss open-data candidates, not yet detailed                                                                                                                       |
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Reproducibility-network partners   | AREN (African Reproducibility Network, founded 2022 by Emmanuel Boakye; runs open-science training and ambassador programs across Africa); GFRN (Global Federation of Reproducibility Networks, whose AI-disclosure working group Lars Schöbitz is part of) | Reach and reproducibility-community links rather than WASH datasets: a route to African practitioners and a partner for the open-science and AI-disclosure angle, beyond the WASH sector |
++------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 - Possible speakers:
   - openwashdata course alumni whose participation led to published, reusable data.
@@ -149,6 +151,8 @@ What better, open data enables for WASH itself, the strategic question raised in
 
 ## The week
 
+- Compact overview
+  - The five daily schedules below and the backdated timeline are also shared as one sheet in the accompanying spreadsheet (week-schedule.xlsx), generated from the tables in this document.
 - Ground rules for every day
   - The day starts at 08:30 with the official session start at 09:00 (Monday's arrival buffer and opening are the exception); breaks on the hour (5 and 15 minutes, including small physical activity exercises); no module ever longer than one hour; close at 16:30 (Friday closes at 15:00).
 - Arrival block
@@ -156,7 +160,7 @@ What better, open data enables for WASH itself, the strategic question raised in
 - Teaching method
   - Every session is a mix of introductory slides, participatory live coding, peer-to-peer instruction, and spaced practice. The training sessions contain no talks. Taught sessions alternate with independent work sessions in which participants work on their own projects.
 - Pedagogy
-  - The week invests into demonstrating the end product first, so participants see what it looks like and what it does for the sector and for them personally. The Thursday data management strategy work then reaches back to collection, storage, and management inside their organisation.
+  - The week invests in demonstrating the end product first, so participants see what it looks like and what it does for the sector and for them personally. The Thursday data management strategy work then reaches back to collection, storage, and management inside their organization.
 - Data security is taught where the risk sits
   - Inside the Tuesday FAIR block (sharing decisions) and inside the Wednesday agentic AI block (what leaves the machine). Both use hands-on examples and end with guardrail measures. The precourse dataset review makes sure no sensitive data enters the workshop in the first place.
 - Case studies keep the practical path (aspirational)
@@ -189,11 +193,11 @@ What better, open data enables for WASH itself, the strategic question raised in
 | 16:30 | Close |
 
 - Responsible sharing
-  - The mantra "as open as possible, as closed as necessary" is a trainable structure. Graded sharing (who gets access, crossed with how processed the data is); where data is too sensitive to publish, the cleaning and anonymising code stays open so the process is transparent. There is a defensible way to share something from every dataset.
+  - The mantra "as open as possible, as closed as necessary" is a trainable structure. Graded sharing (who gets access, crossed with how processed the data is); where data is too sensitive to publish, the cleaning and anonymizing code stays open so the process is transparent. There is a defensible way to share something from every dataset.
 - Qualitative data floor
-  - Voice is biometric data, anonymisation has limits, consent is a process.
+  - Voice is biometric data, anonymization has limits, consent is a process.
 - Tidy data discipline
-  - One observation per row, one variable per column, no merged cells, no colour as information. The biggest gap between a practitioner's spreadsheet and a publishable dataset.
+  - One observation per row, one variable per column, no merged cells, no color as information. The biggest gap between a practitioner's spreadsheet and a publishable dataset.
 - The data dictionary that makes data both FAIR and AI-ready
   - Write down what you know about the data, and the same documentation serves a colleague, a successor, and an AI agent.
 
@@ -208,7 +212,7 @@ What better, open data enables for WASH itself, the strategic question raised in
 | 16:30 | Close |
 | Evening | Walk, run, fire. Topic: AI disruption of the workplace |
 
-- The agentic AI blocks are the fastest-moving part of the programme and might look different from today's tools. It will borrow concepts from the AI Playground session series we plan to host at ETHZ and which will be an open space for anyone to join.
+- The agentic AI blocks are the fastest-moving part of the program and might look different from today's tools. It will borrow concepts from the AI Playground session series we plan to host at ETHZ and which will be an open space for anyone to join.
 - Data security with agents
   - What leaves the machine when a file is dragged into a chat; which accounts and tools hold which data; personal and sensitive information as the boundary. Hands-on with the participant's own package, ending with guardrail measures (what to share with an agent, what to strip first, how to check).
 - Talking about AI: using AI, and the feelings that come with it, is a personal experience. From the day agentic AI enters the room we expect participants to want to talk about those feelings, and the retreat sets aside time for that: the walks and the Wednesday evening topic.
@@ -220,7 +224,7 @@ What better, open data enables for WASH itself, the strategic question raised in
 | 08:30 to 09:00 | Arrival block |
 | 09:00 to 10:30 | Selected participants share their in-workshop work as case studies, invited on the basis of the Wednesday progress review |
 | 10:30 to 12:00 | Personal project work with agentic AI, taking up what the morning presentations inspired |
-| 13:00 to 14:00 | Data management strategy: what a strategy outline or plan for the participant's own organisation contains, and the approach for drafting it |
+| 13:00 to 14:00 | Data management strategy: what a strategy outline or plan for the participant's own organization contains, and the approach for drafting it |
 | 14:00 to 15:00 | Work session: draft the outline or plan with an agentic skill workflow (a packaged, reusable workflow for an AI agent that drafts from the participant's data package and a short questionnaire) |
 | 15:00 to 16:30 | Case study, discussions, buffer |
 | 16:30 | Close |
@@ -248,20 +252,20 @@ Every participant leaves with:
 - Their dataset published as a documented data package (final state by Friday, DOI archiving supported if not already completed).
 - Contributor credit: the data package lists every contributor with an ORCID iD, including surveyors, lab managers, and field teams that author lists on scientific articles typically omit, citable through the DOI.
 - Durable skills: Git, GitHub, Quarto, FAIR data handling, safe work with agentic AI.
-- Named competencies: the skills map onto the Digital Competencies areas information and data literacy, digital content creation, and safety. Tidy data, documentation, and credential and account hygiene are taught as competencies in their own right.
+- Named competencies: tidy data, documentation, and credential and account hygiene are taught as competencies in their own right.
 - A personal website, published on Friday.
-- A draft plan for their own organisation: a data management strategy outline or data management plan, drafted in the Thursday afternoon work session so the practice transfers home.
-- The enrollment path into "Data Science for openwashdata 003"
+- A draft plan for their own organization: a data management strategy outline or data management plan, drafted in the Thursday afternoon work session so the practice transfers home.
+- The enrollment path into "Data Science for openwashdata 003".
 
 ## Workshop outputs
 
 Beyond the participant level, the week produces:
 
-- 48 published data packages on a shared GitHub organisation, archived with DOIs.
+- 48 published data packages on a shared GitHub organization, archived with DOIs.
 - A concise workshop report by the custodians in the format AGUASAN requests.
 - A public interactive website or dashboard that lets others explore the workshop outputs.
 - A report with recommendations for the strategic directions of AGUASAN, and in particular SDC, RésEAU, and the Swiss Water Partnership, on data management and open data in the sector.
-- Data and results of the registration survey (the Data Science for openwashdata pre-course survey), anonymised, as a baseline of digital skills in the sector.
+- Data and results of the registration survey (the Data Science for openwashdata pre-course survey), anonymized, as a baseline of digital skills in the sector.
 - Results of the evaluation survey conducted on the final day.
 - Proposed: an impact monitoring plan that tracks the downstream effects of the week on data management practices, at six and twelve months.
 - Proposed: a research article on the workshop itself, the week documented as an open data publishing experiment across the sector (who came, the method, the published packages, what the monitoring finds), with custodians and participants as co-authors.
@@ -281,7 +285,6 @@ Beyond the participant level, the week produces:
 - Data Science for openwashdata 002 course material: <https://ds4owd-002.github.io/website/>
 - Data Science for openwashdata 002 public capstone projects: <https://openwashdata.org/pages/academy/graduates-2026/>
 - Demand evidence: "Who signs up for openwashdata training", the accompanying document rendered from the same repository.
-- DigComp, the European Digital Competence Framework for Citizens: <https://joint-research-centre.ec.europa.eu/digcomp_en>
 - openwashdata data catalogue: <https://openwashdata.org/pages/gallery/data/>
 - Data Science for openwashdata pre-course survey (open source): <https://github.com/ds4owd-dev/pre-course-survey>
 - Case study: Data stewardship at ETH GHE: <https://cven5999-ss26.github.io/website/assignments/md-03/am-03-2-case-study.html>

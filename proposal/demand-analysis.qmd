@@ -10,7 +10,7 @@ format:
     fig-cap-location: bottom
 ---
 
-The appetite for practical, open, reproducible WASH data skills is not assumed; it is measured. The free Data Science for openwashdata course has run twice, drawing **421 registrations across the two cohorts (ds4owd-001 and ds4owd-002)**. The figures below come from the pre-course surveys those participants completed at sign-up. They describe the audience the 2027 retreat would serve, and the pre-course survey that produced them is the same instrument that would screen and baseline workshop applicants.
+The demand for practical, open, reproducible WASH data skills is measured. The free Data Science for openwashdata course has run twice, drawing **421 registrations across the two cohorts (ds4owd-001 and ds4owd-002)**. The figures below come from the pre-course surveys those participants completed at sign-up. They describe the audience the 2027 retreat would serve, and the pre-course survey that produced them is the same instrument that would screen and baseline workshop applicants.
 
 # Sustained, cross-sector demand
 
@@ -26,7 +26,7 @@ They come from **45 countries, with a strong Global-South majority** (Nigeria, U
 
 # They arrive as beginners
 
-The people who sign up are early-to-mid career and, by their own account, not yet coders. That is the point: the retreat is designed for exactly this starting line.
+The people who sign up are early-to-mid career and, by their own account, not yet coders. 
 
 ![Programming experience at sign-up, both cohorts.](../demand/figures/01-skill-by-cohort.png)
 

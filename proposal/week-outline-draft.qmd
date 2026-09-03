@@ -1,4 +1,15 @@
-# AGUASAN 2027 week outline - working draft
+---
+title: "AGUASAN 2027 week outline"
+subtitle: "Working draft for the revised practice-oriented option"
+author: "Elizabeth Tilley, Lars Schöbitz - Global Health Engineering, ETH Zurich"
+date: today
+format:
+  docx:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+editor: visual
+---
 
 Status: working draft for the rough five-day plan due to Roger and Sandra by Friday 2026-09-04. Monday, the selection process, and the full backdated timeline are dictated (Lars, 2026-08-25); Tuesday to Friday follow in later sessions.
 
@@ -12,7 +23,7 @@ Status: working draft for the rough five-day plan due to Roger and Sandra by Fri
 ## Backdated timeline
 
 | When | What |
-|------------------------------------|------------------------------------|
+|----|----|
 | Now (Sep 2026) | Venue scouting starts. Outline due to Roger and Sandra 2026-09-04 |
 | Mid to late Sep 2026 | Topic selection decision by Skat and SDC |
 | Mid-Oct 2026 | Preparatory day back-to-back with the AGUASAN meeting |
@@ -54,12 +65,12 @@ Status: working draft for the rough five-day plan due to Roger and Sandra by Fri
 This list is still being built. The candidates below are grouped by the kind of case each one shows; the final selection and the case-study selection criteria will be confirmed with the Steering Group.
 
 | Category | Case | What it shows |
-|---|---|---|
+|----|----|----|
 | Practitioner publishing own data | Course capstones (22 from the first cohort, 48 from the second) | Individuals publishing a self-chosen dataset, the direct model for the week |
 | Practitioner publishing own data | Kelsey Shaw | A first-cohort participant who published her PhD data and co-authored a paper in Environmental Science & Technology |
 | Institutional / data stewardship | Data-stewardship work in Malawi and South Africa | The institutional case for open data inside an organisation |
 | Institutional / data stewardship | FAIRqual project | The harder case: sharing qualitative material (interviews, workshops) under FAIR principles while protecting subjects |
-| National / city open data at scale | Malawi, mWater | ~47,000 water points serving 4.8 million people, captured and openly accessible |
+| National / city open data at scale | Malawi, mWater | \~47,000 water points serving 4.8 million people, captured and openly accessible |
 | National / city open data at scale | Cape Town, South Africa | Weekly dam levels on an open portal; third parties build on the licensed data |
 | National / city open data at scale | Kampala, Uganda, Weyonje | KCCA's GIS-enabled faecal-sludge management app |
 | National / city open data at scale | Finland, VEETI | A compulsory national water-services database with open APIs |
@@ -93,7 +104,7 @@ The Git and GitHub foundations are taught as concepts, but participants apply ea
 ### Monday - arrival and foundations
 
 | Time | Block |
-|------------------------------------|------------------------------------|
+|----|----|
 | Until 10:30 | Arrival buffer: the first two hours are parked because not everyone can travel on weekends |
 | 10:30 to 11:00 | Opening |
 | 11:00 to lunch | One module: Git / GitHub Foundations |
@@ -106,7 +117,7 @@ Precourse dependency: the Git and GitHub modules assume the precourse work is do
 ### Tuesday
 
 | Time | Block |
-|------------------------------------|------------------------------------|
+|----|----|
 | 09:00 to 11:00 | Two modules: GitHub Task & Project Management |
 | 11:00 to 12:00 | Data project work |
 | 13:00 to 15:00 | FAIR data principles, including work sessions on the participants' own data to address them |
@@ -115,20 +126,20 @@ Precourse dependency: the Git and GitHub modules assume the precourse work is do
 
 ### Wednesday
 
-| Time           | Block                                                  |
-|----------------|--------------------------------------------------------|
-| Morning        | Excursion (form to decide). The teaching side uses this window to run through all the work done so far and identify progress in each project |
-| 13:00 to 15:00 | Agentic AI                                             |
-| 15:00 to 16:30 | Personal project work with agentic AI                  |
-| 16:30          | Close                                                  |
-| Evening        | Walk, run, fire. Topic: AI disruption of the workplace |
+| Time | Block |
+|----|----|
+| Morning | Excursion (form to decide). The teaching side uses this window to run through all the work done so far and identify progress in each project |
+| 13:00 to 15:00 | Agentic AI |
+| 15:00 to 16:30 | Personal project work with agentic AI |
+| 16:30 | Close |
+| Evening | Walk, run, fire. Topic: AI disruption of the workplace |
 
 - The agentic AI blocks are the fastest-moving part of the programme and might look different from today's tools; that is built in by design. Borrow concepts from the AI Playground session series we plan to host at ETHZ.
 
 ### Thursday
 
 | Time | Block |
-|------------------------------------|------------------------------------|
+|----|----|
 | Morning | Selected participants share their in-workshop work as case studies, invited on the basis of the Wednesday progress review |
 | 13:00 to 15:00 | Work session: draft the data management strategy outline or data management plan for the participant's own organisation |
 | 15:00 to 16:30 | Case study |
@@ -137,7 +148,7 @@ Precourse dependency: the Git and GitHub modules assume the precourse work is do
 ### Friday
 
 | Time | Block |
-|------------------------------------|------------------------------------|
+|----|----|
 | 09:00 to 11:30 | Quarto website workshop (the RDMSS (add reference to material at the end) workshop, slightly extended to 2.5 hours) |
 | 13:00 to 14:00 | AI session: craft the personal website and publish it (for participants who brought their CVs to the morning workshop) |
 | 14:00 to 15:00 | Closing session: the week summarized through the outputs that were created, and commitment confirmed for the coming R data science class (ds4owd-003) |

@@ -22,7 +22,7 @@ For the full rationale, vision, and supporting evidence, see the [concept note](
 
 - `README.qmd` - the proposal, filled in from the concept note. This is the version to submit.
 - `README.md` - the rendered GFM output, so the proposal displays on GitHub when browsing the `proposal/` folder.
-- `week-outline-draft.md` - the five-day week outline for the revised option (backdated timeline, participant selection, travel grants, case studies, day-by-day schedule, take-home outputs).
+- `week-outline-draft.qmd` - the five-day week outline for the revised option (backdated timeline, participant selection, travel grants, case studies, day-by-day schedule, take-home outputs).
 - `demand-analysis.qmd` - the demand evidence narrative around the nine figures in `demand/figures/`; renders to a DOCX review export.
 - `extract-tables.py` - writes the outline's timeline and daily tables to one CSV in `exports/` (gitignored) for Google Sheets review. Run from the repo root: `python3 proposal/extract-tables.py`.
 

@@ -2,8 +2,9 @@
 """Extract the timing tables and overview timeline from the week outline to CSV.
 
 Reads proposal/week-outline-draft.qmd, finds each table (pipe or Pandoc grid) that sits under a
-target heading, and writes ONE combined CSV to exports/ for Google Sheets
-review. Each row is tagged with the section it came from.
+target heading, and writes ONE combined CSV next to the outline
+(proposal/week-schedule.csv, tracked) for sharing and review. Each row is
+tagged with the section it came from.
 Run from the repo root: python3 proposal/extract-tables.py
 """
 import csv
@@ -12,9 +13,7 @@ import sys
 from pathlib import Path
 
 SRC = Path("proposal/week-outline-draft.qmd")
-OUT = Path("exports")
-OUT.mkdir(exist_ok=True)
-COMBINED = OUT / "aguasan-week-schedule.csv"
+COMBINED = Path("proposal/week-schedule.csv")
 
 # Heading text -> (section label, kind). Only these sections are exported,
 # in this order.

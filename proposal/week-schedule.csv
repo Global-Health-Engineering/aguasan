@@ -1,0 +1,50 @@
+Section,When / Time,What / Block
+Timeline (overview),Now (Sep 2026),Venue scouting starts. Outline due to Roger and Sandra 2026-09-04
+Timeline (overview),Mid to late Sep 2026,Topic selection decision by Skat and SDC
+Timeline (overview),Mid-Oct 2026,Preparatory day back-to-back with the AGUASAN meeting
+Timeline (overview),Autumn 2026,Budget clarification with Skat and SDC: is there a possibility to provide a participant support line and/or childcare line
+Timeline (overview),Mid-October to end of November 2026,"SNSF Scientific Exchanges application for participant support submitted, with participants unnamed and the selection process described (allowed under the guidelines; travel capped at CHF 1,000 per unnamed participant); the decision takes up to three months, so it lands before the February outreach"
+Timeline (overview),Winter 2026/27,Steering Group design sessions (per the AGUASAN process)
+Timeline (overview),~1 to 14 Feb 2027,"Outreach and promotion campaign, a two-week push"
+Timeline (overview),~Mid-March 2027,Outreach reminder 1 (four weeks after the campaign)
+Timeline (overview),~Mid-April 2027,Outreach reminder 2 (eight weeks after the campaign)
+Timeline (overview),Beginning of May 2027 (~Mon 3 May),Submission due date: participation applications plus grant and travel bursary requests (six weeks before selection concludes)
+Timeline (overview),May to mid-June 2027,"Screening: datasets, surveys, videos; selection decisions"
+Timeline (overview),Mid-June 2027,"Participant selection concludes, before Swiss summer school holidays and leaving enough time for invitations and visas. Precourse window opens"
+Timeline (overview),Mid-June to end of August 2027,Precourse window: each group of six meets online with its supporter; dataset review for sensitive fields before anything is shared; targeted support with data collection tools where a participant's data calls for it; accounts and setup
+Timeline (overview),By ~30 Aug 2027 (one week before start),"Precourse work completed by every participant: accounts created, setup worked through, a clean browser with the relevant bookmarks, precourse assignments read"
+Timeline (overview),Week of 6 to 10 Sep 2027,Workshop week
+Timeline (overview),Within two weeks after (by ~24 Sep 2027),"""Data Science for openwashdata 003"", the 10-week online course starts: the immediate follow-up course. Output potential: Journal style articles with participants data."
+Timeline (overview),By ~end of October 2027,Evaluation survey results and the custodian workshop report delivered in the requested format; the recommendations report drafted with the Steering Group
+Timeline (overview),March 2028 and September 2028,Impact monitoring at six and twelve months; the research article follows the twelve month point (both proposed)
+Timeline (overview),May/June or September/October 2028 (to decide),"Second openwashdata conference at Monte Verità (Congressi Stefano Franscini); application in preparation, due 2026-10-31 (to confirm on the CSF platform)"
+Monday,Until 10:30,Arrival buffer: the first two hours are parked because not everyone can travel on weekends
+Monday,10:30 to 11:00,Opening
+Monday,11:00 to lunch,One module: Git / GitHub Foundations
+Monday,13:00 to 15:00,"Two modules: Git / GitHub foundations, one hour each"
+Monday,15:00 to 16:30,"Case study, discussions, buffer"
+Monday,16:30,Close
+Tuesday,08:30 to 09:00,Arrival block
+Tuesday,09:00 to 11:00,Two modules: GitHub Task & Project Management
+Tuesday,11:00 to 12:00,Data project work
+Tuesday,13:00 to 15:00,"FAIR data principles and responsible sharing, with work sessions on the participants' own data"
+Tuesday,15:00 to 16:30,"Case study, discussions, buffer"
+Tuesday,16:30,Close
+Wednesday,08:30 to 10:30,Morning walk with a walking case-study debrief; the teaching side runs through all the work so far and identifies progress in each project
+Wednesday,10:30 to 12:00,"Agentic AI, first module: concepts and a first hands-on run with an agent on the participant's own package"
+Wednesday,13:00 to 15:00,"Agentic AI, modules two and three, including data security with agents"
+Wednesday,15:00 to 16:30,Personal project work with agentic AI
+Wednesday,16:30,Close
+Wednesday,Evening,"Walk, run, fire. Topic: AI disruption of the workplace"
+Thursday,08:30 to 09:00,Arrival block
+Thursday,09:00 to 10:30,"Selected participants share their in-workshop work as case studies, invited on the basis of the Wednesday progress review"
+Thursday,10:30 to 12:00,"Personal project work with agentic AI, taking up what the morning presentations inspired"
+Thursday,13:00 to 14:00,"Data management strategy: what a strategy outline or plan for the participant's own organization contains, and the approach for drafting it"
+Thursday,14:00 to 15:00,"Work session: draft the outline or plan with an agentic skill workflow (a packaged, reusable workflow for an AI agent that drafts from the participant's data package and a short questionnaire)"
+Thursday,15:00 to 16:30,"Case study, discussions, buffer"
+Thursday,16:30,Close
+Friday,08:30 to 09:00,Arrival block
+Friday,09:00 to 11:30,"Quarto website workshop (the RDMSS workshop, slightly extended to 2.5 hours; see References)"
+Friday,13:00 to 14:00,AI session: craft the personal website and publish it (for participants who brought their CVs to the morning workshop)
+Friday,14:00 to 15:00,"Closing session: the week summarized through the outputs that were created, the evaluation survey completed in the room, and commitment confirmed for the coming R data science class (Data Science for openwashdata 003)"
+Friday,15:00,"Close, end of the week"
